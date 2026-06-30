@@ -1,0 +1,419 @@
+/* 챗봇 상담 상세 전체 */
+.chat-detail-wrap {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* 헤더 */
+.chat-detail-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 28px;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+/* 챗봇 배지 */
+.chat-detail-badge {
+    display: inline-block;
+    margin-bottom: 8px;
+    padding: 6px 14px;
+    border-radius: 999px;
+    background-color: #F7FBF7;
+    color: #7FAF8B;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* 제목 */
+.chat-detail-title {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 700;
+    color: #24382a;
+}
+
+/* 전체 장바구니 담기 */
+.chat-all-cart-btn {
+    min-width: 128px;
+    height: 42px;
+    padding: 0 18px;
+    border: none;
+    border-radius: 14px;
+    background-color: #7FAF8B;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    transition: 0.2s;
+    flex-shrink: 0;
+}
+
+.chat-all-cart-btn:hover {
+    background-color: #6d9f78;
+}
+
+.chat-all-cart-btn:disabled {
+    cursor: default;
+    opacity: 0.8;
+}
+
+.chat-all-cart-btn--done {
+    background-color: #6d9f78;
+}
+
+.chat-all-cart-btn--error {
+    background-color: #ff6b6b;
+}
+
+/* 메시지 목록 */
+.chat-msg-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* 메시지 카드 */
+.chat-msg {
+    padding: 22px 24px;
+    border: 1px solid #e8e8e8;
+    border-radius: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 6px 18px rgba(127, 175, 139, 0.08);
+    box-sizing: border-box;
+}
+
+/* 사용자 메시지 */
+.chat-msg--user {
+    background-color: #F7FBF7;
+}
+
+/* AI 메시지 */
+.chat-msg--ai {
+    background-color: #ffffff;
+}
+
+/* 보낸 사람 */
+.chat-msg__sender {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #7FAF8B;
+    font-weight: 700;
+}
+
+/* 메시지 내용 */
+.chat-msg__text {
+    flex: 1;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #333;
+    white-space: pre-wrap;
+}
+
+/* AI 답변 + 추천상품 */
+.chat-ai-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+/* 추천상품 영역 */
+.chat-prd-section {
+    width: 300px;
+    flex-shrink: 0;
+    padding-left: 18px;
+    border-left: 1px solid #e8e8e8;
+}
+
+/* 추천상품 제목 */
+.chat-prd-section__title {
+    margin: 0 0 12px;
+    font-size: 15px;
+    color: #24382a;
+    font-weight: 700;
+}
+
+/* 추천상품 목록 */
+.chat-prd-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* 추천상품 아이템 */
+.chat-prd-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #e8e8e8;
+    border-radius: 16px;
+    background-color: #F7FBF7;
+}
+
+/* 추천상품 이미지 박스 */
+.chat-prd-item__img-wrap {
+    width: 58px;
+    height: 58px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* 추천상품 이미지 */
+.chat-prd-item__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+/* 추천상품 정보 */
+.chat-prd-item__info {
+    flex: 1;
+    min-width: 0;
+    cursor: pointer;
+}
+
+/* 추천상품 브랜드 */
+.chat-prd-item__brand {
+    margin: 0 0 4px;
+    font-size: 11px;
+    color: #7FAF8B;
+    font-weight: 700;
+}
+
+/* 추천상품명 */
+.chat-prd-item__name {
+    margin: 0 0 4px;
+    font-size: 13px;
+    line-height: 1.3;
+    color: #24382a;
+    font-weight: 700;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* 추천상품 가격 */
+.chat-prd-item__price {
+    margin: 0;
+    font-size: 12px;
+    color: #333;
+    font-weight: 700;
+}
+
+/* 개별 장바구니 버튼 */
+.chat-cart-btn {
+    height: 30px;
+    padding: 0 10px;
+    border-radius: 10px;
+    border: 1px solid #7FAF8B;
+    background-color: #ffffff;
+    color: #4f7a57;
+    font-size: 11px;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: 0.2s;
+}
+
+.chat-cart-btn:hover {
+    background-color: #7FAF8B;
+    color: #ffffff;
+}
+
+.chat-cart-btn:disabled {
+    cursor: default;
+    opacity: 0.8;
+}
+
+.chat-cart-btn--done {
+    background-color: #6d9f78;
+    border-color: #6d9f78;
+    color: #ffffff;
+}
+
+.chat-cart-btn--error {
+    border-color: #ff6b6b;
+    color: #ff4d4f;
+}
+
+/* 하단 버튼 영역 */
+.chat-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+/* 하단 버튼 공통 */
+.chat-btn {
+    min-width: 96px;
+    height: 40px;
+    padding: 0 16px;
+    border: none;
+    border-radius: 14px;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* 목록 버튼 */
+.chat-btn--list {
+    background-color: #F7FBF7;
+    color: #4f7a57;
+}
+
+/* 장바구니 버튼 */
+.chat-btn--cart {
+    background-color: #7FAF8B;
+    color: #ffffff;
+}
+
+/* 뒤로가기 버튼 */
+.chat-btn--back {
+    background-color: #7FAF8B;
+    color: #ffffff;
+}
+
+.chat-btn:hover {
+    background-color: #6d9f78;
+    color: #ffffff;
+}
+
+/* 로딩 / 에러 */
+.chat-loading-wrap,
+.chat-error-wrap {
+    min-height: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.chat-loading-spinner {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 14px;
+    border: 4px solid #E3EEE5;
+    border-top: 4px solid #7FAF8B;
+    border-radius: 50%;
+    animation: chatSpin 0.8s linear infinite;
+}
+
+@keyframes chatSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.chat-loading-text,
+.chat-error-text {
+    font-size: 15px;
+    color: #7FAF8B;
+    font-weight: 700;
+}
+
+/* 태블릿 */
+@media (max-width: 1024px) {
+    .chat-detail-title {
+        font-size: 24px;
+    }
+
+    .chat-ai-row {
+        flex-direction: column;
+    }
+
+    .chat-prd-section {
+        width: 100%;
+        padding-left: 0;
+        padding-top: 16px;
+        border-left: none;
+        border-top: 1px solid #e8e8e8;
+    }
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+    .chat-detail-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .chat-detail-title {
+        font-size: 24px;
+    }
+
+    .chat-all-cart-btn {
+        width: 100%;
+    }
+
+    .chat-msg {
+        padding: 20px;
+    }
+
+    .chat-prd-item {
+        flex-wrap: wrap;
+    }
+
+    .chat-cart-btn {
+        margin-left: auto;
+    }
+
+    .chat-actions {
+        justify-content: flex-start;
+    }
+}
+
+/* 작은 모바일 */
+@media (max-width: 480px) {
+    .chat-detail-title {
+        font-size: 22px;
+    }
+
+    .chat-detail-badge {
+        font-size: 12px;
+    }
+
+    .chat-msg {
+        padding: 18px 16px;
+        border-radius: 16px;
+    }
+
+    .chat-msg__text {
+        font-size: 13px;
+    }
+
+    .chat-prd-item {
+        border-radius: 14px;
+    }
+
+    .chat-actions {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .chat-btn {
+        width: 100%;
+    }
+}

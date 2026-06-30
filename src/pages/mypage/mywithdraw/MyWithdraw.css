@@ -1,0 +1,126 @@
+/* 회원 탈퇴 전체 */
+.mywithdraw-wrap {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* 제목 */
+.mywithdraw-wrap h2 {
+    margin: 0 0 8px;
+    font-size: 26px;
+    font-weight: 700;
+    color: #24382a;
+}
+
+/* 안내 문구 */
+.mywithdraw-wrap > p {
+    margin: 0 0 28px;
+    font-size: 15px;
+    color: #7a857c;
+    line-height: 1.5;
+}
+
+/* 폼 영역 */
+.mywithdraw-form {
+    padding: 32px 28px;
+    background-color: #ffffff;
+    border: 1px solid #e8e8e8;
+    border-radius: 20px;
+    box-shadow: 0 6px 18px rgba(127, 175, 139, 0.08);
+    box-sizing: border-box;
+}
+
+/* 입력창 */
+.mywithdraw-form input {
+    width: 100%;
+    height: 46px;
+    padding: 0 14px;
+    border: 1px solid #d8e5da;
+    border-radius: 12px;
+    font-size: 14px;
+    color: #24382a;
+    outline: none;
+    box-sizing: border-box;
+    transition: 0.2s;
+}
+
+.mywithdraw-form input::placeholder {
+    color: #aaa;
+}
+
+.mywithdraw-form input:focus {
+    border-color: #7FAF8B;
+    box-shadow: 0 0 0 3px rgba(127, 175, 139, 0.12);
+}
+
+/* 에러 메시지 */
+.mywithdraw-error {
+    margin: 8px 0 0 2px !important;
+    font-size: 13px !important;
+    color: #ff6b6b !important;
+    line-height: 1.4;
+}
+
+/* 탈퇴 버튼 */
+.mywithdraw-btn {
+    width: 100%;
+    height: 46px;
+    margin-top: 24px;
+    border: none;
+    border-radius: 12px;
+    background-color: #7FAF8B;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.mywithdraw-btn:hover {
+    background-color: #6d9f78;
+}
+
+.mywithdraw-btn:disabled {
+    background-color: #d9d9d9;
+    cursor: not-allowed;
+}
+
+/* 태블릿 */
+@media (max-width: 1024px) {
+    .mywithdraw-wrap h2 {
+        font-size: 24px;
+    }
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+    .mywithdraw-wrap h2 {
+        font-size: 24px;
+    }
+
+    .mywithdraw-form {
+        padding: 24px 20px;
+    }
+}
+
+/* 작은 모바일 */
+@media (max-width: 480px) {
+    .mywithdraw-wrap h2 {
+        font-size: 22px;
+    }
+
+    .mywithdraw-wrap > p {
+        font-size: 14px;
+    }
+
+    .mywithdraw-form {
+        padding: 20px 16px;
+        border-radius: 16px;
+    }
+
+    .mywithdraw-form input,
+    .mywithdraw-btn {
+        height: 44px;
+    }
+}

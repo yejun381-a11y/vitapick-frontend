@@ -1,0 +1,227 @@
+/* 주문 상세 전체 */
+.myOrderDetail {
+    width: 100%;
+}
+
+/* 상단 */
+.myOrderDetailHeader {
+    margin-bottom: 28px;
+}
+
+.myOrderDetailHeader h2 {
+    margin: 0 0 8px;
+    font-size: 26px;
+    font-weight: 700;
+    color: #24382a;
+}
+
+.myOrderDetailHeader p {
+    margin: 0;
+    font-size: 15px;
+    color: #7a857c;
+}
+
+/* 주문 정보 */
+.myOrderInfoBox {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    padding: 28px;
+    background-color: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+.myOrderInfoBox div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.myOrderInfoBox strong {
+    font-size: 14px;
+    color: #777;
+}
+
+.myOrderInfoBox span {
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+}
+
+/* 주문 상품 */
+.myOrderItemBox {
+    margin-top: 24px;
+    padding: 28px;
+    background-color: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.myOrderItemBox h3 {
+    margin: 0 0 18px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #24382a;
+}
+
+.myOrderItemEmpty {
+    margin: 0;
+    padding: 24px 0;
+    font-size: 15px;
+    color: #777;
+    text-align: center;
+}
+
+/* 상품 한 줄 */
+.myOrderItem {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    min-height: 92px;
+    padding: 14px 0;
+    border-bottom: 1px solid #f0f0f0;
+    box-sizing: border-box;
+}
+
+.myOrderItem:last-child {
+    border-bottom: none;
+}
+
+/* 상품 이미지 */
+.myOrderItemImg {
+    width: 64px !important;
+    height: 64px !important;
+    min-width: 64px;
+    max-width: 64px;
+    display: block;
+    object-fit: cover;
+    border: 1px solid #eeeeee;
+    border-radius: 14px;
+    background-color: #f8f8f8;
+    flex: 0 0 64px;
+}
+
+/* 상품 정보 */
+.myOrderItemInfo {
+    flex: 1;
+    min-width: 0;
+}
+
+.myOrderItemInfo strong {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.myOrderItemInfo p {
+    margin: 0;
+    font-size: 13px;
+    color: #777;
+}
+
+/* 상품 가격 */
+.myOrderItemPrice {
+    flex-shrink: 0;
+    min-width: 90px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #333;
+    text-align: right;
+}
+
+/* 버튼 */
+.myOrderDetailButtons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 28px;
+}
+
+.myOrderDetailButtons button {
+    min-width: 120px;
+    height: 44px;
+    border: none;
+    border-radius: 12px;
+    background-color: #7FAF8B;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.myOrderDetailButtons button:hover {
+    background-color: #6d9f78;
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+    .myOrderInfoBox {
+        grid-template-columns: 1fr;
+    }
+
+    .myOrderItem {
+        align-items: center;
+        gap: 12px;
+    }
+
+    .myOrderItemImg {
+        width: 58px !important;
+        height: 58px !important;
+        min-width: 58px;
+        max-width: 58px;
+        flex-basis: 58px;
+        border-radius: 12px;
+    }
+
+    .myOrderItemPrice {
+        min-width: 80px;
+        font-size: 14px;
+    }
+
+    .myOrderDetailButtons button {
+        width: 100%;
+    }
+}
+
+/* 작은 모바일 */
+@media (max-width: 480px) {
+    .myOrderInfoBox,
+    .myOrderItemBox {
+        padding: 22px 18px;
+    }
+
+    .myOrderDetailHeader h2 {
+        font-size: 22px;
+    }
+
+    .myOrderDetailHeader p {
+        font-size: 14px;
+    }
+
+    .myOrderItemImg {
+        width: 54px !important;
+        height: 54px !important;
+        min-width: 54px;
+        max-width: 54px;
+        flex-basis: 54px;
+    }
+
+    .myOrderItemInfo strong {
+        font-size: 14px;
+    }
+
+    .myOrderItemInfo p,
+    .myOrderItemPrice {
+        font-size: 13px;
+    }
+}

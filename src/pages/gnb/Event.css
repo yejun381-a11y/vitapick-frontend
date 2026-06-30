@@ -1,0 +1,212 @@
+/* 이벤트 페이지 전체 */
+.eventPage {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 0 70px;
+    box-sizing: border-box;
+}
+
+/* 메인 이벤트 배너 */
+.eventBanner {
+    position: relative;
+    overflow: hidden;
+
+    min-height: 340px;
+    padding: 42px 56px;
+
+    border: 1px solid #DDEBDF;
+    border-radius: 24px;
+
+    background: linear-gradient(
+        135deg,
+        #FFFFFF 0%,
+        #F1F7F2 100%
+    );
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 34px;
+
+    box-shadow: 0 10px 28px rgba(127, 175, 139, 0.1);
+    box-sizing: border-box;
+}
+
+/* 배너 텍스트 영역 */
+.eventBannerText {
+    width: 43%;
+    flex-shrink: 0;
+    z-index: 2;
+}
+
+/* 이벤트 라벨 */
+.eventBannerText span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 32px;
+    padding: 0 16px;
+
+    border-radius: 999px;
+    background-color: #7FAF8B;
+    color: #fff;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* 배너 제목 */
+.eventBannerText h3 {
+    margin: 22px 0 18px;
+
+    font-size: 36px;
+    line-height: 1.35;
+    font-weight: 800;
+
+    color: #17251C;
+}
+
+/* 배너 강조 문구 */
+.eventBannerText h3 strong {
+    color: #5FA46D;
+}
+
+/* 배너 설명 */
+.eventBannerText p {
+    margin: 0;
+
+    font-size: 16px;
+    line-height: 1.75;
+    color: #5F6F63;
+}
+
+/* 배너 이미지 영역 */
+.eventBannerImg {
+    width: 54%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* 배너 이미지 */
+.eventBannerImg img {
+    width: 100%;
+    max-width: 560px;
+    display: block;
+}
+
+/* 전 고객 증정 배지 */
+.eventGiftBadge {
+    position: absolute;
+    top: 58px;
+    right: 72px;
+
+    width: 88px;
+    height: 88px;
+
+    border-radius: 50%;
+    background-color: #5E9D69;
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    font-size: 19px;
+    font-weight: 800;
+    line-height: 1.35;
+
+    box-shadow: 0 8px 18px rgba(94, 157, 105, 0.22);
+}
+
+/* 슬라이드 점 숨김 */
+.eventDots {
+    display: none;
+}
+
+/* 반응형 1024px */
+@media (max-width: 1024px) {
+    .eventPage {
+        padding: 24px 24px 60px;
+    }
+
+    .eventBanner {
+        min-height: auto;
+        padding: 42px 36px;
+        gap: 28px;
+    }
+
+    .eventBannerText h3 {
+        font-size: 32px;
+    }
+
+    .eventBannerText p {
+        font-size: 15px;
+    }
+
+    .eventGiftBadge {
+        top: 36px;
+        right: 38px;
+        width: 78px;
+        height: 78px;
+        font-size: 17px;
+    }
+}
+
+/* 반응형 768px */
+@media (max-width: 768px) {
+    .eventBanner {
+        flex-direction: column;
+        text-align: center;
+        padding: 38px 24px;
+        border-radius: 20px;
+    }
+
+    .eventBannerText {
+        width: 100%;
+    }
+
+    .eventBannerImg {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .eventBannerImg img {
+        max-width: 480px;
+    }
+
+    .eventGiftBadge {
+        display: none;
+    }
+
+    .eventBannerText h3 {
+        font-size: 29px;
+    }
+}
+
+/* 반응형 480px */
+@media (max-width: 480px) {
+    .eventPage {
+        padding: 20px 16px 50px;
+    }
+
+    .eventBanner {
+        padding: 32px 20px;
+    }
+
+    .eventBannerText span {
+        height: 30px;
+        font-size: 12px;
+    }
+
+    .eventBannerText h3 {
+        font-size: 24px;
+    }
+
+    .eventBannerText p {
+        font-size: 14px;
+    }
+}

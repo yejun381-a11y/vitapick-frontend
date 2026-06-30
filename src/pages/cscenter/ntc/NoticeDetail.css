@@ -1,0 +1,152 @@
+/* 공지사항 상세 전체 영역 */
+.cs-notice-detail-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 20px 80px;
+    box-sizing: border-box;
+}
+
+/* 공지사항 상세 제목 */
+.cs-notice-detail-title {
+    margin: 0 0 18px;
+    color: #222;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+/* 공지사항 상세 정보 영역 */
+.cs-notice-detail-info {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 24px;
+    color: #6f7f73;
+    font-size: 13px;
+}
+
+/* 공지사항 상세 내용 영역 */
+.cs-notice-detail-content {
+    min-height: 280px;
+    padding: 28px;
+    border: 1px solid #dfe9e1;
+    border-radius: 14px;
+    background-color: #fff;
+    box-shadow: 0 8px 22px rgba(127, 175, 139, 0.07);
+    color: #333;
+    font-size: 15px;
+    line-height: 1.8;
+    white-space: pre-wrap;
+    box-sizing: border-box;
+}
+
+/* 버튼 영역 */
+.cs-notice-detail-btn-wrap {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 34px;
+}
+
+/* 공통 버튼 */
+.cs-notice-detail-btn,
+.cs-notice-edit-btn,
+.cs-notice-delete-btn {
+    min-width: 88px;
+    height: 46px;
+    padding: 0 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* 목록 버튼 */
+.cs-notice-detail-btn {
+    background-color: #7FAF8B;
+    color: #fff;
+}
+
+/* 수정 버튼 */
+.cs-notice-edit-btn {
+    background-color: #7FAF8B;
+    color: #fff;
+}
+
+/* 삭제 버튼 */
+.cs-notice-delete-btn {
+    background-color: #EEF6F0;
+    color: #5f7f66;
+}
+
+/* hover */
+.cs-notice-detail-btn:hover,
+.cs-notice-edit-btn:hover {
+    background-color: #6d9d79;
+}
+
+.cs-notice-delete-btn:hover {
+    background-color: #dfece2;
+}
+
+/* 태블릿 */
+@media (max-width: 1024px) {
+    .cs-notice-detail-container {
+        padding: 40px 16px;
+    }
+
+    .cs-notice-detail-title {
+        font-size: 28px;
+    }
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+    .cs-notice-detail-container {
+        padding: 32px 12px;
+    }
+
+    .cs-notice-detail-title {
+        font-size: 24px;
+        line-height: 1.5;
+    }
+
+    .cs-notice-detail-info {
+        flex-direction: column;
+        gap: 8px;
+        font-size: 13px;
+    }
+
+    .cs-notice-detail-content {
+        min-height: 220px;
+        padding: 18px;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .cs-notice-detail-btn-wrap {
+        flex-direction: column;
+    }
+
+    .cs-notice-detail-btn,
+    .cs-notice-edit-btn,
+    .cs-notice-delete-btn {
+        width: 100%;
+    }
+}
+
+/* 작은 모바일 */
+@media (max-width: 480px) {
+    .cs-notice-detail-container {
+        padding: 28px 10px;
+    }
+
+    .cs-notice-detail-title {
+        font-size: 22px;
+    }
+
+    .cs-notice-detail-content {
+        padding: 14px;
+        font-size: 13px;
+    }
+}

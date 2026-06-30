@@ -1,0 +1,210 @@
+/* 로그인 전체 영역 */
+.body_container {
+    width: calc(100% - 48px);
+    max-width: 420px;
+
+    margin: 40px auto;
+
+    padding: 40px 40px 28px;
+
+    background-color: #FFFFFF;
+    border: 1px solid #E3EEE5;
+    border-radius: 24px;
+
+    box-shadow: 0 8px 24px rgba(127, 175, 139, 0.08);
+
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* 로그인 제목 */
+.body_container h2 {
+    margin: 0 0 32px;
+
+    font-size: 34px;
+    font-weight: 700;
+
+    color: #6E9D79;
+    letter-spacing: -0.03em;
+}
+
+/* input 공통 */
+.body_container input[type="text"],
+.body_container input[type="password"] {
+    width: 100%;
+    height: 56px;
+
+    margin-bottom: 16px;
+    padding: 0 18px;
+
+    border: 1px solid #D7E6DA;
+    border-radius: 14px;
+
+    background-color: #FAFDFB;
+
+    font-size: 15px;
+    color: #333;
+
+    box-sizing: border-box;
+    outline: none;
+
+    transition: all 0.2s ease;
+}
+
+/* placeholder */
+.body_container input::placeholder {
+    color: #8A928B;
+}
+
+/* focus */
+.body_container input[type="text"]:focus,
+.body_container input[type="password"]:focus {
+    border-color: #7FAF8B;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 0 4px rgba(127, 175, 139, 0.12);
+}
+
+/* 자동완성 */
+.body_container input:-webkit-autofill,
+.body_container input:-webkit-autofill:hover,
+.body_container input:-webkit-autofill:focus,
+.body_container input:-webkit-autofill:active {
+    -webkit-text-fill-color: #333 !important;
+    -webkit-box-shadow: 0 0 0 1000px #FFFFFF inset !important;
+    transition: background-color 9999s ease-in-out 0s;
+}
+
+/* 로그인 버튼 */
+.loginBtn {
+    width: 100%;
+    max-width: 220px;
+
+    height: 56px;
+
+    margin-top: 12px;
+
+    border: none;
+    border-radius: 14px;
+
+    background-color: #7FAF8B;
+
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+/* hover */
+.loginBtn:hover {
+    background-color: #6C9C78;
+    transform: translateY(-1px);
+}
+
+/* active */
+.loginBtn:active {
+    transform: translateY(0);
+}
+
+/* 아이디찾기 비밀번호찾기 */
+.body_container a {
+    color: #333;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.body_container a:hover {
+    color: #7FAF8B;
+}
+
+/* 하단 안내 */
+.body_container span {
+    display: inline-block;
+
+    margin-top: 14px;
+
+    font-size: 14px;
+    color: #666;
+
+    line-height: 1.6;
+}
+
+/* 회원가입 */
+.body_container strong {
+    color: #7FAF8B !important;
+    font-weight: 600;
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.body_container strong:hover {
+    color: #5F8668 !important;
+}
+
+/* hr 제거 */
+.body_container hr {
+    display: none;
+}
+
+/* ========================= */
+/* 태블릿 */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+    .body_container {
+        width: calc(100% - 40px);
+
+        margin: 32px auto;
+
+        padding: 36px 32px 24px;
+    }
+
+    .body_container h2 {
+        font-size: 31px;
+        margin-bottom: 28px;
+    }
+}
+
+/* ========================= */
+/* 모바일 */
+/* ========================= */
+
+@media (max-width: 480px) {
+
+    .body_container {
+        width: calc(100% - 24px);
+
+        margin: 24px auto;
+
+        padding: 30px 20px 20px;
+
+        border-radius: 20px;
+    }
+
+    .body_container h2 {
+        font-size: 28px;
+        margin-bottom: 24px;
+    }
+
+    .body_container input[type="text"],
+    .body_container input[type="password"] {
+        height: 52px;
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+
+    .loginBtn {
+        max-width: 100%;
+        height: 52px;
+        margin-top: 10px;
+    }
+
+    .body_container span {
+        margin-top: 12px;
+        font-size: 13px;
+    }
+}

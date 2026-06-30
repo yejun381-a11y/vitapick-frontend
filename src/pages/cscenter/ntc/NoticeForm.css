@@ -1,0 +1,227 @@
+/* 공지사항 등록 전체 영역 */
+.notice-form-wrap {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    box-sizing: border-box;
+}
+
+/* 공지사항 등록 제목 */
+.notice-form-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+/* form 전체 */
+.notice-form {
+    width: 100%;
+}
+
+/* 입력 그룹 */
+.notice-form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 28px;
+}
+
+/* 라벨 */
+.notice-form-group label {
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+/* input */
+.notice-form-group input {
+    width: 100%;
+    height: 54px;
+    padding: 0 18px;
+    border: 1px solid #DCE8DE;
+    border-radius: 10px;
+    font-size: 15px;
+    color: #333;
+    outline: none;
+    box-sizing: border-box;
+    transition: 0.2s;
+    font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+}
+
+/* textarea */
+.notice-form-group textarea {
+    width: 100%;
+    min-height: 320px;
+    padding: 18px;
+    border: 1px solid #DCE8DE;
+    border-radius: 10px;
+    font-size: 15px;
+    line-height: 1.8;
+    color: #333;
+    resize: none;
+    outline: none;
+    box-sizing: border-box;
+    transition: 0.2s;
+    font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+}
+
+/* select */
+.notice-form-group select {
+    width: 180px;
+    height: 54px;
+    padding: 0 18px;
+    border: 1px solid #DCE8DE;
+    border-radius: 10px;
+    background-color: #fff;
+    font-size: 15px;
+    color: #333;
+    outline: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+}
+
+/* placeholder */
+.notice-form-group input::placeholder,
+.notice-form-group textarea::placeholder {
+    color: #999;
+    font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+}
+
+/* focus */
+.notice-form-group input:focus,
+.notice-form-group textarea:focus,
+.notice-form-group select:focus {
+    border-color: #7FAF8B;
+    box-shadow: 0 0 0 4px rgba(127, 175, 139, 0.12);
+}
+
+/* 버튼 영역 */
+.notice-form-btn-wrap {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 40px;
+}
+
+/* 등록 버튼 */
+.notice-form-submit-btn {
+    min-width: 140px;
+    height: 50px;
+    padding: 0 28px;
+    border: none;
+    border-radius: 10px;
+    background-color: #7FAF8B;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+    font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+}
+
+/* 등록 버튼 hover */
+.notice-form-submit-btn:hover {
+    background-color: #6A9875;
+}
+
+/* 취소 버튼 */
+.notice-form-cancel-btn {
+    min-width: 140px;
+    height: 50px;
+    padding: 0 28px;
+    border: none;
+    border-radius: 10px;
+    background-color: #EEF5EF;
+    color: #5E7D66;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+    font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+}
+
+/* 취소 버튼 hover */
+.notice-form-cancel-btn:hover {
+    background-color: #DFECE2;
+}
+
+/* 태블릿 */
+@media (max-width: 1024px) {
+
+    .notice-form-wrap {
+        padding: 40px 20px;
+    }
+
+    .notice-form-title {
+        font-size: 28px;
+    }
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+
+    .notice-form-wrap {
+        padding: 30px 16px;
+    }
+
+    .notice-form-title {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    .notice-form-group {
+        margin-bottom: 22px;
+    }
+
+    .notice-form-group label {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .notice-form-group input {
+        height: 48px;
+        font-size: 14px;
+    }
+
+    .notice-form-group textarea {
+        min-height: 240px;
+        font-size: 14px;
+        padding: 14px;
+    }
+
+    .notice-form-group select {
+        width: 140px;
+        height: 44px;
+        font-size: 13px;
+    }
+
+    .notice-form-btn-wrap {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .notice-form-submit-btn,
+    .notice-form-cancel-btn {
+        width: 100%;
+        max-width: 220px;
+        height: 46px;
+        font-size: 14px;
+    }
+}
+
+/* 작은 모바일 */
+@media (max-width: 480px) {
+
+    .notice-form-title {
+        font-size: 22px;
+    }
+
+    .notice-form-submit-btn,
+    .notice-form-cancel-btn {
+        max-width: 100%;
+    }
+}

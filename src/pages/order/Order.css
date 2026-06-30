@@ -1,0 +1,891 @@
+/* 주문서 전체 */
+.orderPage {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px 120px;
+    box-sizing: border-box;
+}
+
+/* 제목 */
+.orderTitle {
+    margin: 0 0 28px;
+    font-size: 32px;
+    font-weight: 700;
+    color: #222;
+}
+
+/* 주문서 레이아웃 */
+.orderContent {
+    display: flex;
+    gap: 28px;
+    align-items: flex-start;
+}
+
+/* 왼쪽 영역 */
+.orderLeft {
+    flex: 1;
+    min-width: 0;
+}
+
+/* 섹션 */
+.orderSection {
+    margin-bottom: 24px;
+    padding: 28px;
+    border: 1px solid #e8e8e8;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0 6px 18px rgba(127, 175, 139, 0.08);
+    box-sizing: border-box;
+}
+
+.orderSection h3 {
+    margin: 0 0 20px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #333;
+}
+
+/* 섹션 상단 */
+.orderSectionTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.orderSectionTop h3 {
+    margin: 0;
+}
+
+/* 배송지 추가/변경 버튼 */
+.addAddrBtn {
+    flex-shrink: 0;
+    border: none;
+    border-radius: 12px;
+    background-color: #7FAF8B;
+    color: #fff;
+    padding: 11px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.addAddrBtn:hover {
+    background-color: #6c9d77;
+}
+
+/* 선택한 배송지 */
+.selectedAddrBox {
+    padding: 22px;
+    border: 1px solid #7FAF8B;
+    border-radius: 16px;
+    background-color: #F1F7F2;
+    box-sizing: border-box;
+}
+
+.selectedAddrBox p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+    word-break: keep-all;
+}
+
+/* 배송지 없음 */
+.emptyAddrBox {
+    padding: 38px 20px;
+    border-radius: 16px;
+    background-color: #F7FBF7;
+    text-align: center;
+}
+
+.emptyAddrBox p {
+    margin: 0;
+    font-size: 15px;
+    color: #666;
+}
+
+/* 배송지 이름 줄 */
+.addrNameRow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+}
+
+.addrNameRow strong {
+    font-size: 17px;
+    color: #333;
+}
+
+.addrNameRow span {
+    padding: 4px 9px;
+    border-radius: 999px;
+    background-color: #7FAF8B;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* 주문 요청사항 */
+.orderRequestSelect {
+    width: 100%;
+    height: 50px;
+    padding: 0 42px 0 16px;
+    border: 1px solid #d8e5da;
+    border-radius: 14px;
+    background-color: #fff;
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: inherit;
+    outline: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: 0.2s;
+    appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, #333 50%),
+        linear-gradient(135deg, #333 50%, transparent 50%);
+    background-position: calc(100% - 20px) 21px, calc(100% - 14px) 21px;
+    background-size: 6px 6px, 6px 6px;
+    background-repeat: no-repeat;
+}
+
+.orderRequestSelect:hover {
+    border-color: #AFCBB1;
+    background-color: #F7FBF7;
+}
+
+.orderRequestSelect:focus {
+    border-color: #7FAF8B;
+    box-shadow: 0 0 0 3px rgba(127, 175, 139, 0.12);
+}
+
+.orderRequestSelect option {
+    color: #333;
+    background-color: #fff;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.orderRequestTextarea {
+    display: block;
+    width: 100%;
+    min-height: 100px;
+    margin-top: 12px;
+    padding: 16px;
+    border: 1px solid #d8e5da;
+    border-radius: 14px;
+    background-color: #fff;
+    color: #333;
+    resize: vertical;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 1.6;
+    font-family: inherit;
+    outline: none;
+    transition: 0.2s;
+}
+
+.orderRequestTextarea:hover {
+    border-color: #AFCBB1;
+    background-color: #F7FBF7;
+}
+
+.orderRequestTextarea:focus {
+    border-color: #7FAF8B;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(127, 175, 139, 0.12);
+}
+
+.orderRequestTextarea::placeholder {
+    color: #999;
+}
+
+/* 주문 상품 */
+.orderItemList {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.orderItem {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.orderItem:last-child {
+    border-bottom: none;
+}
+
+/* 상품 이미지 */
+.orderItemImg {
+    width: 82px;
+    height: 82px;
+    object-fit: cover;
+    border: 1px solid #eee;
+    border-radius: 14px;
+    background-color: #f8f8f8;
+    flex-shrink: 0;
+}
+
+.orderItemInfo {
+    flex: 1;
+    min-width: 0;
+}
+
+.orderItemInfo strong {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 17px;
+    color: #333;
+    word-break: keep-all;
+}
+
+.orderItemInfo p {
+    margin: 0 0 6px;
+    font-size: 14px;
+    color: #777;
+}
+
+.orderItemInfo span {
+    font-size: 14px;
+    color: #555;
+}
+
+.orderItemPrice {
+    flex-shrink: 0;
+    font-size: 17px;
+    font-weight: 700;
+    color: #333;
+    white-space: nowrap;
+}
+
+/* 결제수단 */
+.payMethodBox {
+    display: flex;
+    gap: 12px;
+}
+
+.payMethodBox label {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+    padding: 16px 18px;
+    border: 1px solid #e5e5e5;
+    border-radius: 14px;
+    background-color: #fff;
+    color: #555;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+    box-sizing: border-box;
+}
+
+.payMethodBox label:hover {
+    border-color: #AFCBB1;
+    background-color: #F7FBF7;
+}
+
+.payMethodBox label.active {
+    border-color: #7FAF8B;
+    background-color: #F1F7F2;
+    color: #4f7a57;
+}
+
+.payMethodBox input {
+    accent-color: #7FAF8B;
+}
+
+/* 결제 요약 */
+.orderSummary {
+    position: sticky;
+    top: 100px;
+    width: 340px;
+    flex-shrink: 0;
+    padding: 28px;
+    border: 1px solid #e8e8e8;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0 6px 18px rgba(127, 175, 139, 0.08);
+    box-sizing: border-box;
+}
+
+.orderSummary h3 {
+    margin: 0 0 22px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #333;
+}
+
+.summaryTotal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin: 22px 0;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.summaryTotal span {
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+}
+
+.summaryTotal strong {
+    font-size: 24px;
+    font-weight: 800;
+    color: #4f7a57;
+    white-space: nowrap;
+}
+
+/* 주문 버튼 */
+.orderBtn {
+    width: 100%;
+    height: 52px;
+    border: none;
+    border-radius: 14px;
+    background-color: #7FAF8B;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.orderBtn:hover {
+    background-color: #6c9d77;
+}
+
+.orderBtn:disabled {
+    background-color: #cfcfcf;
+    cursor: not-allowed;
+}
+
+/* 배송지 모달 배경 */
+.addrModalBg {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+/* 배송지 모달 */
+.addrModalBox {
+    position: relative;
+    z-index: 100000;
+    width: 100%;
+    max-width: 640px;
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+    background: #fff;
+    border-radius: 20px;
+    padding: 28px;
+    box-sizing: border-box;
+}
+
+/* 모달 내부 폼 영역 보정 */
+.addrModalBox .userAddrFormWrap {
+    width: 100%;
+    margin: 0;
+}
+
+.addrModalBox .userAddrForm {
+    width: 100%;
+    max-width: 100%;
+    padding: 28px;
+    border-radius: 18px;
+    box-sizing: border-box;
+    box-shadow: none;
+}
+
+.addrModalBox .userAddrFormTitle {
+    margin: 0 0 24px;
+    padding-right: 42px;
+    font-size: 26px;
+}
+
+/* 배송지 선택 모달 */
+.addrSelectModalBox {
+    max-width: 520px;
+    min-height: auto;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 배송지 선택 제목 */
+.addrSelectTitle {
+    margin: 0 0 22px;
+    padding: 0 48px;
+    border-bottom: none;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    color: #333;
+    box-sizing: border-box;
+}
+
+/* 모달 닫기 */
+.addrModalCloseBtn {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    z-index: 2;
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: transparent;
+    color: #333;
+    font-size: 30px;
+    line-height: 1;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.addrModalCloseBtn:hover {
+    color: #111;
+}
+
+/* 배송지 안내 문구 숨김 */
+.addrModalInfo {
+    display: none;
+}
+
+/* 배송지 추가 라인 버튼 */
+.addrAddLineBtn {
+    width: 100%;
+    height: 48px;
+    margin-bottom: 18px;
+    border: 1px solid #d8e5da;
+    border-radius: 14px;
+    background-color: #F7FBF7;
+    color: #4f7a57;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.addrAddLineBtn:hover {
+    border-color: #7FAF8B;
+    background-color: #F1F7F2;
+}
+
+/* 모달 배송지 목록 */
+.addrList {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* 배송지 선택 목록 */
+.addrSelectList {
+    max-height: 360px;
+    overflow-y: auto;
+    padding-bottom: 18px;
+}
+
+/* 배송지 선택 카드 */
+.addrSelectCard {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 20px;
+    border: 1px solid #d8e5da;
+    border-radius: 16px;
+    background-color: #fff;
+    color: inherit;
+    font-family: inherit;
+    text-align: left;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: 0.2s;
+}
+
+.addrSelectCard:hover {
+    border-color: #AFCBB1;
+    background-color: #F7FBF7;
+}
+
+.addrSelectCard.active {
+    border-color: #7FAF8B;
+    background-color: #F1F7F2;
+}
+
+/* 선택 라디오 표시 */
+.addrSelectRadio {
+    width: 18px;
+    height: 18px;
+    margin-top: 31px;
+    border: 2px solid #7FAF8B;
+    border-radius: 50%;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.addrSelectRadio span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #7FAF8B;
+}
+
+/* 선택 카드 정보 */
+.addrSelectInfo {
+    flex: 1;
+    min-width: 0;
+}
+
+.addrSelectInfo .addrNameRow {
+    margin-bottom: 8px;
+}
+
+.addrSelectInfo .addrNameRow strong {
+    font-size: 16px;
+    color: #333;
+}
+
+.addrSelectInfo p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #444;
+    line-height: 1.5;
+    word-break: keep-all;
+}
+
+/* 선택 완료 버튼 */
+.addrConfirmBtn {
+    width: 100%;
+    height: 52px;
+    margin-top: 4px;
+    border: none;
+    border-radius: 14px;
+    background-color: #7FAF8B;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.addrConfirmBtn:hover {
+    background-color: #6c9d77;
+}
+
+/* 태블릿 */
+@media (max-width: 1024px) {
+    .orderPage {
+        padding: 36px 24px 110px;
+    }
+
+    .orderContent {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .orderLeft {
+        width: 100%;
+    }
+
+    .orderSummary {
+        position: static;
+        width: 100%;
+    }
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+    .orderPage {
+        padding: 32px 16px 100px;
+    }
+
+    .orderTitle {
+        margin-bottom: 22px;
+        font-size: 28px;
+    }
+
+    .orderSection,
+    .orderSummary {
+        padding: 22px;
+        border-radius: 18px;
+    }
+
+    .orderSection h3,
+    .orderSummary h3 {
+        font-size: 20px;
+    }
+
+    .orderSectionTop {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .addAddrBtn {
+        width: 100%;
+    }
+
+    .selectedAddrBox {
+        padding: 18px;
+    }
+
+    .payMethodBox {
+        flex-direction: column;
+    }
+
+    .payMethodBox label {
+        width: 100%;
+        padding: 15px 16px;
+    }
+
+    .orderItem {
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .orderItemImg {
+        width: 74px;
+        height: 74px;
+    }
+
+    .orderItemInfo strong {
+        font-size: 16px;
+    }
+
+    .orderItemPrice {
+        margin-left: auto;
+        padding-top: 2px;
+        font-size: 16px;
+        text-align: right;
+    }
+
+    .addrModalBg {
+        align-items: center;
+        padding: 24px 16px;
+    }
+
+    .addrModalBox {
+        max-width: 100%;
+        max-height: calc(100vh - 48px);
+        padding: 22px;
+        border-radius: 20px;
+    }
+
+    .addrModalBox .userAddrForm {
+        padding: 22px;
+    }
+
+    .addrSelectModalBox {
+        max-width: 100%;
+        padding: 24px;
+    }
+
+    .addrSelectTitle {
+        font-size: 20px;
+    }
+}
+
+/* 작은 모바일 */
+@media (max-width: 480px) {
+    .orderPage {
+        padding: 28px 14px 90px;
+    }
+
+    .orderTitle {
+        font-size: 24px;
+    }
+
+    .orderContent {
+        gap: 20px;
+    }
+
+    .orderSection,
+    .orderSummary {
+        padding: 18px;
+        border-radius: 16px;
+    }
+
+    .orderSection {
+        margin-bottom: 20px;
+    }
+
+    .orderSection h3,
+    .orderSummary h3 {
+        font-size: 19px;
+    }
+
+    .emptyAddrBox {
+        padding: 30px 16px;
+    }
+
+    .orderRequestSelect {
+        height: 48px;
+        font-size: 13px;
+    }
+
+    .orderRequestTextarea {
+        min-height: 90px;
+        padding: 14px;
+        font-size: 13px;
+    }
+
+    .orderItem {
+        display: grid;
+        grid-template-columns: 66px 1fr;
+        gap: 10px 12px;
+        align-items: flex-start;
+        padding: 16px 0;
+    }
+
+    .orderItemImg {
+        width: 66px;
+        height: 66px;
+        border-radius: 12px;
+        grid-row: span 2;
+    }
+
+    .orderItemInfo strong {
+        font-size: 15px;
+        line-height: 1.35;
+    }
+
+    .orderItemInfo p,
+    .orderItemInfo span {
+        font-size: 13px;
+    }
+
+    .orderItemPrice {
+        grid-column: 2;
+        margin-left: 0;
+        padding-top: 0;
+        font-size: 15px;
+        text-align: left;
+    }
+
+    .summaryTotal {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .summaryTotal strong {
+        font-size: 22px;
+        white-space: normal;
+    }
+
+    .orderBtn {
+        height: 50px;
+        font-size: 16px;
+    }
+
+    .addrModalBg {
+        padding: 14px;
+    }
+
+    .addrModalBox {
+        max-height: calc(100vh - 28px);
+        padding: 18px;
+        border-radius: 18px;
+    }
+
+    .addrModalBox .userAddrForm {
+        padding: 18px;
+        border-radius: 16px;
+    }
+
+    .addrModalBox .userAddrFormTitle {
+        font-size: 22px;
+    }
+
+    .addrSelectModalBox {
+        padding: 22px 18px;
+    }
+
+    .addrSelectTitle {
+        font-size: 19px;
+    }
+
+    .addrAddLineBtn {
+        height: 46px;
+    }
+
+    .addrSelectCard {
+        padding: 18px 14px;
+    }
+
+    .addrSelectRadio {
+        margin-top: 30px;
+    }
+
+    .addrConfirmBtn {
+        height: 50px;
+    }
+}
+
+/* 아주 작은 모바일 */
+@media (max-width: 360px) {
+    .orderPage {
+        padding: 24px 12px 80px;
+    }
+
+    .orderSection,
+    .orderSummary {
+        padding: 16px;
+    }
+
+    .orderItem {
+        grid-template-columns: 58px 1fr;
+    }
+
+    .orderItemImg {
+        width: 58px;
+        height: 58px;
+    }
+
+    .summaryTotal strong {
+        font-size: 20px;
+    }
+
+    .addrModalBox {
+        padding: 16px;
+    }
+
+    .addrModalBox .userAddrForm {
+        padding: 16px;
+    }
+
+    .addrSelectCard {
+        gap: 10px;
+    }
+
+    .addrSelectInfo p {
+        font-size: 13px;
+    }
+}

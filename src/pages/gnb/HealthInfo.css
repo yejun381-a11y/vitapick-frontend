@@ -1,0 +1,322 @@
+/* 건강정보 전체 */
+.healthPage {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 18px 0 70px;
+    box-sizing: border-box;
+}
+
+/* 건강정보 상단 영역 */
+.healthTop {
+    display: grid;
+    grid-template-columns: 230px 1fr;
+    gap: 32px;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+/* 상단 소개 */
+.healthIntro {
+    margin: 0;
+}
+
+/* 상단 소개 제목 */
+.healthIntro h2 {
+    margin: 0 0 16px;
+    font-size: 30px;
+    font-weight: 800;
+    color: #17251c;
+}
+
+/* 상단 소개 설명 */
+.healthIntro p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.75;
+    color: #4f5f55;
+}
+
+/* 상단 배너 */
+.healthBanner {
+    height: 145px;
+    padding: 0 64px;
+    border: 1px solid #dfeee2;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #ffffff 0%, #F1F7F2 100%);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 0 10px 24px rgba(127, 175, 139, 0.1);
+    box-sizing: border-box;
+}
+
+/* 상단 배너 문구 */
+.healthBanner p {
+    margin: 0 0 8px;
+    font-size: 21px;
+    color: #17251c;
+}
+
+/* 상단 배너 강조 문구 */
+.healthBanner strong {
+    font-size: 26px;
+    font-weight: 800;
+    color: #4f9b5f;
+}
+
+/* 상단 배너 아이콘 */
+.healthBannerIcon {
+    width: 104px;
+    height: 104px;
+    border-radius: 50%;
+    background-color: #E3F3E7;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 46px;
+}
+
+/* 본문 레이아웃 */
+.healthContent {
+    display: grid;
+    grid-template-columns: 230px 1fr;
+    gap: 32px;
+    align-items: start;
+}
+
+/* 카테고리 */
+.healthCategory {
+    overflow: hidden;
+    border: 1px solid #dbeade;
+    border-radius: 14px;
+    background-color: #fff;
+    box-shadow: 0 8px 20px rgba(127, 175, 139, 0.08);
+}
+
+/* 카테고리 제목 */
+.healthCategory h3 {
+    margin: 0;
+    padding: 18px;
+    background-color: #F1F7F2;
+    font-size: 16px;
+    font-weight: 800;
+    color: #4f9b5f;
+}
+
+/* 카테고리 버튼 */
+.healthCategory button {
+    width: 100%;
+    height: 54px;
+    padding: 0 18px;
+    border: none;
+    border-bottom: 1px solid #edf3ee;
+    background-color: #fff;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 15px;
+    color: #24382a;
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+/* 카테고리 마지막 버튼 */
+.healthCategory button:last-child {
+    border-bottom: none;
+}
+
+/* 카테고리 버튼 hover */
+.healthCategory button:hover {
+    background-color: #F7FBF8;
+    color: #4f9b5f;
+}
+
+/* 카테고리 화살표 */
+.healthCategory button span:last-child {
+    color: #7FAF8B;
+}
+
+/* 메인 영역 */
+.healthMain {
+    min-width: 0;
+}
+
+/* 섹션 */
+.healthSection {
+    margin-bottom: 40px;
+}
+
+/* 섹션 제목 */
+.healthSection h3 {
+    margin: 0 0 18px;
+    font-size: 22px;
+    font-weight: 800;
+    color: #17251c;
+}
+
+/* TOP5 카드 영역 */
+.nutrientGrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
+}
+
+/* TOP5 카드 */
+.nutrientCard {
+    position: relative;
+    min-height: 260px;
+    padding: 30px 20px 20px;
+    border: 1px solid #dfeee2;
+    border-radius: 14px;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(127, 175, 139, 0.08);
+    box-sizing: border-box;
+
+    transition: 0.2s ease;
+}
+
+/* TOP5 카드 hover */
+.nutrientCard:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 26px rgba(127, 175, 139, 0.14);
+}
+
+/* 순위 배지 */
+.rankBadge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #EAF5EC;
+    color: #4f9b5f;
+
+    font-size: 15px;
+    font-weight: 800;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 1위 배지 */
+.rank1 {
+    background-color: #7FAF8B;
+    color: #fff;
+}
+
+/* 2위 배지 */
+.rank2 {
+    background-color: #A8CBB0;
+    color: #fff;
+}
+
+/* 3위 배지 */
+.rank3 {
+    background-color: #C9DDCE;
+    color: #4f7a57;
+}
+
+/* 영양제 아이콘 */
+.nutrientIcon {
+    width: 86px;
+    height: 86px;
+    margin: 0 auto 16px;
+    border-radius: 50%;
+    background-color: #EAF5EC;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 32px;
+    font-weight: 800;
+    color: #4f9b5f;
+}
+
+/* 영양제 이름 */
+.nutrientCard h4 {
+    margin: 0 0 12px;
+    font-size: 17px;
+    font-weight: 800;
+    color: #17251c;
+}
+
+/* 영양제 설명 */
+.nutrientCard p {
+    min-height: 62px;
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #4f5f55;
+}
+
+/* 반응형 1024px */
+@media (max-width: 1024px) {
+    .healthPage {
+        padding: 28px 24px 60px;
+    }
+
+    .healthTop,
+    .healthContent {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .healthCategory {
+        display: none;
+    }
+
+    .nutrientGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* 반응형 768px */
+@media (max-width: 768px) {
+    .healthPage {
+        padding-top: 24px;
+    }
+
+    .healthBanner {
+        height: auto;
+        padding: 32px 28px;
+    }
+
+    .healthBannerIcon {
+        display: none;
+    }
+
+    .nutrientGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 반응형 480px */
+@media (max-width: 480px) {
+    .nutrientGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .healthIntro h2 {
+        font-size: 28px;
+    }
+
+    .healthBanner p {
+        font-size: 18px;
+    }
+
+    .healthBanner strong {
+        font-size: 22px;
+    }
+}

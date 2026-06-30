@@ -1,0 +1,273 @@
+/* 회원가입 전체 영역 */
+.join-wrap {
+    width: 100%;
+    min-height: calc(100vh - 160px);
+    padding: 40px 20px;
+    background-color: #F7FBF7;
+    box-sizing: border-box;
+}
+
+/* 회원가입 카드 */
+.join-card {
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 40px 42px 34px;
+    background-color: #FFFFFF;
+    border: 1px solid #E3EEE5;
+    border-radius: 24px;
+    box-shadow: 0 8px 24px rgba(127, 175, 139, 0.10);
+    box-sizing: border-box;
+}
+
+/* 회원가입 제목 */
+.join-title,
+.join-card h2 {
+    margin: 0 0 30px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    color: #6E9D79;
+    letter-spacing: -0.03em;
+}
+
+/* 입력 그룹 */
+.join-group {
+    margin-bottom: 18px;
+}
+
+/* 라벨 */
+.join-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #3F4A42;
+}
+
+/* input, select 공통 */
+.join-input,
+.join-form input,
+.join-form select {
+    width: 100%;
+    height: 52px;
+    padding: 0 16px;
+    border: 1px solid #D7E6DA;
+    border-radius: 14px;
+    background-color: #FAFDFB;
+    color: #333333;
+    font-size: 15px;
+    outline: none;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+/* placeholder */
+.join-input::placeholder,
+.join-form input::placeholder {
+    color: #8A928B;
+}
+
+/* focus */
+.join-input:focus,
+.join-form input:focus,
+.join-form select:focus {
+    border-color: #7FAF8B;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 0 4px rgba(127, 175, 139, 0.12);
+}
+
+/* 아이디/이메일 + 중복확인 버튼 한 줄 */
+.join-inline {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* 한 줄 안의 input */
+.join-inline .join-input {
+    flex: 1;
+    min-width: 0;
+}
+
+/* 중복확인 버튼 */
+.join-check-btn {
+    flex-shrink: 0;
+    width: 96px;
+    height: 52px;
+    border: none;
+    border-radius: 14px;
+    background-color: #AFCBB1;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* 중복확인 hover */
+.join-check-btn:hover {
+    background-color: #7FAF8B;
+    transform: translateY(-1px);
+}
+
+/* 중복확인 active */
+.join-check-btn:active {
+    transform: translateY(0);
+}
+
+/* 안내/에러 문구 */
+.join-group p,
+.join-form p {
+    margin: 7px 0 0;
+    font-size: 13px;
+    line-height: 1.45;
+}
+
+/* 회원가입 버튼 */
+.join-submit-btn,
+.join-form > button[type="submit"] {
+    width: 100%;
+    height: 54px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 14px;
+    background-color: #7FAF8B;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* 회원가입 버튼 hover */
+.join-submit-btn:hover,
+.join-form > button[type="submit"]:hover {
+    background-color: #6C9C78;
+    transform: translateY(-1px);
+}
+
+/* 회원가입 버튼 active */
+.join-submit-btn:active,
+.join-form > button[type="submit"]:active {
+    transform: translateY(0);
+}
+
+/* 회원가입 버튼 disabled */
+.join-submit-btn:disabled,
+.join-form > button[type="submit"]:disabled {
+    background-color: #BFD4C1;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* 자동완성 제거 */
+.join-form input:-webkit-autofill,
+.join-form input:-webkit-autofill:hover,
+.join-form input:-webkit-autofill:focus,
+.join-form input:-webkit-autofill:active {
+    -webkit-text-fill-color: #333333 !important;
+    -webkit-box-shadow: 0 0 0 1000px #FFFFFF inset !important;
+    transition: background-color 9999s ease-in-out 0s;
+}
+
+
+/* 태블릿 */
+@media (max-width: 768px) {
+
+    .join-wrap {
+        padding: 32px 20px;
+    }
+
+    .join-card {
+        max-width: 500px;
+        padding: 36px 32px 30px;
+    }
+
+    .join-title,
+    .join-card h2 {
+        margin-bottom: 28px;
+        font-size: 30px;
+    }
+}
+
+
+/* 모바일 */
+@media (max-width: 480px) {
+
+    .join-wrap {
+        padding: 24px 12px;
+    }
+
+    .join-card {
+        padding: 30px 18px 24px;
+        border-radius: 20px;
+    }
+
+    .join-title,
+    .join-card h2 {
+        margin-bottom: 24px;
+        font-size: 28px;
+    }
+
+    .join-group {
+        margin-bottom: 14px;
+    }
+
+    .join-group label {
+        margin-bottom: 6px;
+        font-size: 13px;
+    }
+
+    .join-input,
+    .join-form input,
+    .join-form select {
+        height: 50px;
+        padding: 0 14px;
+        font-size: 14px;
+        border-radius: 13px;
+    }
+
+    .join-inline {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+
+    .join-check-btn {
+        width: 100%;
+        height: 48px;
+        border-radius: 13px;
+    }
+
+    .join-group p,
+    .join-form p {
+        font-size: 12px;
+    }
+
+    .join-submit-btn,
+    .join-form > button[type="submit"] {
+        height: 52px;
+        margin-top: 8px;
+        font-size: 15px;
+        border-radius: 13px;
+    }
+}
+
+
+/* 아주 작은 모바일 */
+@media (max-width: 360px) {
+
+    .join-wrap {
+        padding: 20px 10px;
+    }
+
+    .join-card {
+        padding: 26px 14px 22px;
+    }
+
+    .join-title,
+    .join-card h2 {
+        font-size: 26px;
+    }
+}

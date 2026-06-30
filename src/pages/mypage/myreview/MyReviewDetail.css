@@ -1,0 +1,414 @@
+/* 전체 영역 */
+.rvw-detail-wrap {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* 로딩/에러 */
+.rvw-detail-loading,
+.rvw-detail-error {
+    padding: 70px 20px;
+    text-align: center;
+    font-size: 16px;
+    color: #7FAF8B;
+}
+
+/* 헤더 */
+.rvw-detail-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 28px;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+/* 뒤로가기 버튼 */
+.rvw-detail-back {
+    height: 36px;
+    padding: 0 14px;
+    border: 1px solid #d8e5da;
+    border-radius: 12px;
+    background-color: #fff;
+    color: #4f7a57;
+    font-size: 13px;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.rvw-detail-back:hover {
+    border-color: #AFCBB1;
+    background-color: #F7FBF7;
+    color: #4f7a57;
+}
+
+/* 제목 */
+.rvw-detail-title {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 700;
+    color: #24382a;
+}
+
+/* 리뷰 카드 */
+.rvw-detail-card {
+    padding: 32px;
+    background-color: #ffffff;
+    border: 1px solid #e8e8e8;
+    border-radius: 20px;
+    box-shadow: 0 6px 18px rgba(127, 175, 139, 0.08);
+    box-sizing: border-box;
+}
+
+/* 리뷰 상세 상품 정보 */
+.rvw-detail-product {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+/* 상품 이미지 */
+.rvw-detail-img {
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+    border-radius: 16px;
+    background-color: #F7FBF7;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* 상품 정보 텍스트 */
+.rvw-detail-prd-info {
+    flex: 1;
+    min-width: 0;
+}
+
+/* 브랜드 */
+.rvw-detail-brand {
+    margin: 0 0 6px;
+    font-size: 13px;
+    color: #7FAF8B;
+    font-weight: 700;
+}
+
+/* 상품명 */
+.rvw-detail-prdNm {
+    margin: 0 0 8px;
+    font-size: 18px;
+    color: #24382a;
+    font-weight: 700;
+    line-height: 1.4;
+    word-break: keep-all;
+}
+
+/* 가격 */
+.rvw-detail-price {
+    font-size: 15px;
+    color: #333;
+    font-weight: 700;
+}
+
+/* 별점 */
+.rvw-detail-star {
+    margin-bottom: 12px;
+    font-size: 28px;
+    color: #FFD700;
+}
+
+/* 날짜 */
+.rvw-detail-date {
+    margin: 0 0 20px;
+    font-size: 13px;
+    color: #7a857c;
+}
+
+/* 리뷰 내용 */
+.rvw-detail-cmt {
+    margin: 0 0 24px;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.7;
+}
+
+/* 관리자 답변 */
+.rvw-detail-reply {
+    margin-bottom: 24px;
+    padding: 16px;
+    border-radius: 14px;
+    background-color: #F7FBF7;
+    font-size: 14px;
+    color: #333;
+}
+
+/* 관리자 답변 제목 */
+.rvw-detail-reply strong {
+    display: block;
+    margin-bottom: 8px;
+    color: #7FAF8B;
+    font-weight: 700;
+}
+
+/* 관리자 답변 내용 */
+.rvw-detail-reply p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* 버튼 영역 */
+.rvw-detail-btns {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+/* 버튼 공통 */
+.rvw-detail-prd-btn,
+.rvw-detail-edit-btn,
+.rvw-detail-delete-btn,
+.rvw-detail-save-btn,
+.rvw-detail-cancel-btn {
+    height: 38px;
+    padding: 0 15px;
+    border-radius: 13px;
+    background-color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+/* 상품 보기 버튼 */
+.rvw-detail-prd-btn {
+    border: 1px solid #7FAF8B;
+    color: #4f7a57;
+}
+
+.rvw-detail-prd-btn:hover {
+    background-color: #7FAF8B;
+    color: #fff;
+}
+
+/* 수정 버튼 */
+.rvw-detail-edit-btn {
+    border: 1px solid #d8e5da;
+    color: #4f5f52;
+}
+
+.rvw-detail-edit-btn:hover {
+    border-color: #AFCBB1;
+    background-color: #F7FBF7;
+    color: #4f7a57;
+}
+
+/* 삭제 버튼 */
+.rvw-detail-delete-btn {
+    border: 1px solid #d8e5da;
+    color: #6f7f72;
+}
+
+.rvw-detail-delete-btn:hover {
+    border-color: #AFCBB1;
+    background-color: #F7FBF7;
+    color: #4f7a57;
+}
+
+/* 수정 폼 영역 */
+.rvw-detail-edit-box {
+    margin-top: 10px;
+}
+
+/* 수정 별점 */
+.rvw-detail-edit-star {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 14px;
+}
+
+/* 수정 별점 ON */
+.rvw-detail-star-on {
+    color: #FFD700;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* 수정 별점 OFF */
+.rvw-detail-star-off {
+    color: #ddd;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* 수정 textarea */
+.rvw-detail-edit-textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #D7E6DA;
+    border-radius: 12px;
+    font-size: 15px;
+    resize: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+    line-height: 1.6;
+}
+
+.rvw-detail-edit-textarea:focus {
+    border-color: #7FAF8B;
+}
+
+/* 수정 폼 버튼 영역 */
+.rvw-detail-edit-btns {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 14px;
+}
+
+/* 수정 완료 버튼 */
+.rvw-detail-save-btn {
+    border: none;
+    background-color: #7FAF8B;
+    color: #ffffff;
+}
+
+.rvw-detail-save-btn:hover {
+    background-color: #6d9f78;
+}
+
+/* 취소 버튼 */
+.rvw-detail-cancel-btn {
+    border: 1px solid #d8e5da;
+    color: #6f7f72;
+}
+
+.rvw-detail-cancel-btn:hover {
+    border-color: #AFCBB1;
+    background-color: #F7FBF7;
+    color: #4f7a57;
+}
+
+/* 태블릿 */
+@media (max-width: 1024px) {
+    .rvw-detail-title {
+        font-size: 24px;
+    }
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+    .rvw-detail-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 28px;
+    }
+
+    .rvw-detail-title {
+        font-size: 24px;
+    }
+
+    .rvw-detail-card {
+        padding: 22px;
+    }
+
+    .rvw-detail-product {
+        align-items: flex-start;
+    }
+
+    .rvw-detail-img {
+        width: 86px;
+        height: 86px;
+    }
+
+    .rvw-detail-prdNm {
+        font-size: 16px;
+    }
+
+    .rvw-detail-btns,
+    .rvw-detail-edit-btns {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    .rvw-detail-prd-btn,
+    .rvw-detail-edit-btn,
+    .rvw-detail-delete-btn,
+    .rvw-detail-save-btn,
+    .rvw-detail-cancel-btn {
+        height: 36px;
+        padding: 0 13px;
+        font-size: 13px;
+    }
+}
+
+/* 작은 모바일 */
+@media (max-width: 480px) {
+    .rvw-detail-title {
+        font-size: 22px;
+    }
+
+    .rvw-detail-card {
+        padding: 18px 16px;
+        border-radius: 16px;
+    }
+
+    .rvw-detail-product {
+        gap: 12px;
+    }
+
+    .rvw-detail-img {
+        width: 74px;
+        height: 74px;
+        border-radius: 14px;
+    }
+
+    .rvw-detail-brand {
+        font-size: 12px;
+    }
+
+    .rvw-detail-prdNm {
+        font-size: 15px;
+    }
+
+    .rvw-detail-price {
+        font-size: 13px;
+    }
+
+    .rvw-detail-star {
+        font-size: 24px;
+    }
+
+    .rvw-detail-cmt {
+        font-size: 14px;
+    }
+
+    .rvw-detail-reply {
+        padding: 12px 14px;
+        font-size: 13px;
+    }
+
+    .rvw-detail-btns,
+    .rvw-detail-edit-btns {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .rvw-detail-prd-btn,
+    .rvw-detail-edit-btn,
+    .rvw-detail-delete-btn,
+    .rvw-detail-save-btn,
+    .rvw-detail-cancel-btn {
+        width: 100%;
+    }
+}

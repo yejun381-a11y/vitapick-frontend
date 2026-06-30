@@ -1,0 +1,121 @@
+/* 주문 내역 전체 */
+.myOrderList {
+    width: 100%;
+}
+
+/* 상단 */
+.myOrderHeader {
+    margin-bottom: 28px;
+}
+
+.myOrderHeader h2 {
+    margin: 0 0 8px;
+    font-size: 26px;
+    font-weight: 700;
+    color: #24382a;
+}
+
+.myOrderHeader p {
+    margin: 0;
+    font-size: 15px;
+    color: #7a857c;
+}
+
+/* 빈 내역 */
+.myOrderEmpty {
+    padding: 70px 20px;
+    background-color: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.myOrderEmpty p {
+    margin: 0;
+    font-size: 16px;
+    color: #777;
+}
+
+/* 테이블 영역 */
+.myOrderTableWrap {
+    width: 100%;
+    overflow-x: auto;
+    background-color: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 20px;
+}
+
+/* 테이블 */
+.myOrderTable {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 720px;
+}
+
+.myOrderTable th {
+    padding: 18px 12px;
+    background-color: #f6faf7;
+    border-bottom: 1px solid #e8e8e8;
+    font-size: 14px;
+    font-weight: 700;
+    color: #38513d;
+    text-align: center;
+}
+
+.myOrderTable td {
+    padding: 18px 12px;
+    border-bottom: 1px solid #f1f1f1;
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+}
+
+.myOrderTable tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* 주문 상태 */
+.myOrderStatus {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background-color: #eef7f0;
+    color: #6d9f78;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* 상세 버튼 */
+.myOrderDetailBtn {
+    border: none;
+    border-radius: 10px;
+    padding: 9px 14px;
+    background-color: #7FAF8B;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.myOrderDetailBtn:hover {
+    background-color: #6d9f78;
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+    .myOrderHeader h2 {
+        font-size: 24px;
+    }
+}
+
+/* 작은 모바일 */
+@media (max-width: 480px) {
+    .myOrderHeader h2 {
+        font-size: 22px;
+    }
+
+    .myOrderHeader p {
+        font-size: 14px;
+    }
+}

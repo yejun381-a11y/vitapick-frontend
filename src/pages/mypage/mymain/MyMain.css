@@ -1,0 +1,304 @@
+/* 마이페이지 메인 */
+.myMain {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+/* 상단 인사 카드 */
+.myMainCard {
+    width: calc(100% - 42px);
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
+    padding: 36px 40px;
+
+    background: linear-gradient(135deg, #f4fbf5 0%, #eaf6ec 100%);
+    border: 1px solid #dfeee2;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+/* 인사 영역 */
+.myMainText {
+    min-width: 0;
+    flex: 1;
+}
+
+.myMainText h2 {
+    margin: 0 0 10px;
+
+    font-size: 28px;
+    font-weight: 700;
+    color: #24382a;
+}
+
+.myMainText>p {
+    margin: 0;
+
+    font-size: 15px;
+    color: #6f7f72;
+}
+
+/* 요약 카드 영역 */
+.mySummaryWrap {
+    display: flex;
+    gap: 14px;
+
+    margin-top: 28px;
+}
+
+/* 요약 카드 */
+.mySummaryCard {
+    min-width: 130px;
+    padding: 18px 20px;
+
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #dcecdf;
+    border-radius: 18px;
+
+    box-shadow: 0 10px 24px rgba(92, 138, 101, 0.12);
+}
+
+/* 카드 아이콘 */
+.summaryIcon {
+    width: 44px;
+    height: 44px;
+    padding: 10px;
+
+    color: #6ea37b;
+
+    background: #edf7ef;
+    border-radius: 14px;
+
+    flex-shrink: 0;
+}
+
+/* 카드 숫자 */
+.mySummaryCard strong {
+    display: block;
+
+    font-size: 26px;
+    font-weight: 800;
+    line-height: 1;
+
+    color: #2f6f4f;
+}
+
+/* 카드 제목 */
+.mySummaryCard p {
+    margin: 6px 0 0;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    color: #6d7b70;
+}
+
+/* 캐릭터 */
+.myMainCharacter {
+    flex-shrink: 0;
+}
+
+.myMainCharacter img {
+    width: 190px;
+    display: block;
+}
+
+/* AI 설문 배너 */
+.mySurveyBanner {
+    position: relative;
+
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+
+    margin-top: -16px;
+
+    overflow: hidden;
+    border-radius: 24px;
+}
+
+/* AI 설문 배너 이미지 */
+.mySurveyBanner img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+
+    display: block;
+    object-fit: cover;
+
+    border-radius: 24px;
+}
+
+/* AI 설문 버튼 */
+.mySurveyBtn {
+    position: absolute;
+
+    left: 100px;
+    top: 285px;
+
+    padding: 10px 20px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #6ea37b;
+    color: #fff;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow: 0 7px 16px rgba(88, 132, 98, 0.2);
+    transition: all 0.2s ease;
+}
+
+.mySurveyBtn:hover {
+    background: #5d9270;
+    transform: translateY(-2px);
+}
+
+/* 태블릿 */
+@media (max-width: 1024px) {
+
+    .myMainCard {
+        padding: 30px;
+    }
+
+    .mySummaryWrap {
+        flex-wrap: wrap;
+    }
+
+    .mySummaryCard {
+        flex: 1;
+        min-width: 140px;
+    }
+
+    .myMainCharacter img {
+        width: 150px;
+    }
+
+    .mySurveyBanner {
+        margin-top: -10px;
+    }
+
+    .mySurveyBtn {
+        left: 32px;
+        top: auto;
+        bottom: 58px;
+
+        padding: 8px 16px;
+
+        font-size: 11px;
+        border-radius: 8px;
+    }
+
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+
+    .myMainCard {
+        width: 100%;
+
+        flex-direction: column;
+        align-items: flex-start;
+
+        padding: 24px;
+    }
+
+    .myMainCharacter {
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+    }
+
+    .myMainCharacter img {
+        width: 140px;
+    }
+
+    .mySummaryWrap {
+        width: 100%;
+
+        flex-direction: column;
+    }
+
+    .mySummaryCard {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .mySurveyBanner {
+        margin-top: 10px;
+    }
+
+    .mySurveyBanner,
+    .mySurveyBanner img {
+        border-radius: 18px;
+    }
+
+    .mySurveyBtn {
+        left: 20px;
+        top: auto;
+        bottom: 12px;
+
+        padding: 7px 12px;
+
+        font-size: 10px;
+        border-radius: 8px;
+    }
+
+}
+
+/* 작은 모바일 */
+@media (max-width: 480px) {
+
+    .myMainCard {
+        padding: 20px;
+    }
+
+    .myMainText h2 {
+        font-size: 22px;
+    }
+
+    .mySummaryCard {
+        padding: 16px;
+    }
+
+    .mySummaryCard strong {
+        font-size: 22px;
+    }
+
+    .mySurveyBanner,
+    .mySurveyBanner img {
+        border-radius: 16px;
+    }
+
+    .mySurveyBtn {
+        left: 14px;
+        bottom: 9px;
+
+        padding: 6px 10px;
+
+        font-size: 9px;
+        border-radius: 7px;
+    }
+
+}

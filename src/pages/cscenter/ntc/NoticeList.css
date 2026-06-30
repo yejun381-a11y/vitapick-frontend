@@ -1,0 +1,210 @@
+/* 공지사항 전체 영역 */
+.cs-notice-wrap {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    box-sizing: border-box;
+}
+
+/* 공지사항 상단 영역 */
+.cs-notice-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+/* 공지사항 제목 */
+.cs-notice-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+    position: relative;
+    top: 7px;
+}
+
+/* 등록하기 버튼 */
+.cs-notice-write-btn {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    background-color: #7FAF8B;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* 등록하기 버튼 hover */
+.cs-notice-write-btn:hover {
+    background-color: #6A9875;
+}
+
+/* 공지사항 테이블 */
+.cs-notice-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+/* 테이블 헤더 영역 */
+.cs-notice-table thead {
+    border-top: 2px solid #7FAF8B;
+    border-bottom: 1px solid #ddd;
+    background-color: #F7FBF7;
+}
+
+/* 테이블 헤더 */
+.cs-notice-table th {
+    padding: 16px 10px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* 테이블 본문 */
+.cs-notice-table td {
+    padding: 18px 10px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+}
+
+/* 테이블 hover */
+.cs-notice-table tbody tr:hover {
+    background-color: #F7FBF7;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+/* 제목 셀 */
+.cs-notice-title-cell {
+    text-align: left !important;
+    padding-left: 30px !important;
+}
+
+/* 제목 링크 */
+.cs-notice-title-cell a {
+    color: #444;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+/* 제목 링크 hover */
+.cs-notice-title-cell a:hover {
+    color: #7FAF8B;
+}
+
+/* 테이블 빈 데이터 */
+.cs-notice-table-empty {
+    padding: 80px 0 !important;
+    text-align: center !important;
+    color: #999;
+    font-size: 15px;
+}
+
+/* 태블릿 */
+@media (max-width: 1024px) {
+
+    .cs-notice-wrap {
+        padding: 40px 20px;
+    }
+
+    .cs-notice-title {
+        font-size: 28px;
+    }
+
+    .cs-notice-write-btn {
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+
+    .cs-notice-table th {
+        font-size: 14px;
+    }
+
+    .cs-notice-table td {
+        font-size: 13px;
+    }
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+
+    .cs-notice-wrap {
+        padding: 30px 16px;
+    }
+
+    .cs-notice-header {
+        margin-bottom: 10px;
+    }
+
+    .cs-notice-title {
+        font-size: 24px;
+    }
+
+    .cs-notice-write-btn {
+        padding: 9px 14px;
+        font-size: 12px;
+        border-radius: 7px;
+    }
+
+    .cs-notice-table th {
+        padding: 12px 8px;
+        font-size: 13px;
+    }
+
+    .cs-notice-table td {
+        padding: 14px 8px;
+        font-size: 13px;
+    }
+
+    .cs-notice-title-cell {
+        padding-left: 12px !important;
+    }
+
+    /* 번호 숨김 */
+    .cs-notice-table th:nth-child(1),
+    .cs-notice-table td:nth-child(1) {
+        display: none;
+    }
+
+    /* 조회수 숨김 */
+    .cs-notice-table th:nth-child(3),
+    .cs-notice-table td:nth-child(3) {
+        display: none;
+    }
+
+    /* 작성일 숨김 */
+    .cs-notice-table th:nth-child(4),
+    .cs-notice-table td:nth-child(4) {
+        display: none;
+    }
+
+    .cs-notice-empty {
+        padding: 60px 0;
+        font-size: 14px;
+    }
+}
+
+/* 작은 모바일 */
+@media (max-width: 480px) {
+
+    .cs-notice-title {
+        font-size: 22px;
+    }
+
+    .cs-notice-title-cell a {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .cs-notice-write-btn {
+        padding: 8px 12px;
+        font-size: 11px;
+    }
+}

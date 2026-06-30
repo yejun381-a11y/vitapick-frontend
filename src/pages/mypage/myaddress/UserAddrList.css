@@ -1,0 +1,275 @@
+/* 배송지 전체 */
+.addrPage {
+    width: 100%;
+    padding: 10px 0 60px;
+    box-sizing: border-box;
+}
+
+/* 상단 */
+.addrHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 28px;
+}
+
+/* 제목 */
+.addrTitle {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+    color: #24382a;
+}
+
+/* 설명 */
+.addrDesc {
+    margin: 8px 0 0;
+    font-size: 15px;
+    color: #6f7f72;
+}
+
+/* 추가 버튼 */
+.addrAddBtn {
+    min-width: 120px;
+    height: 42px;
+    padding: 0 18px;
+    border: none;
+    border-radius: 12px;
+    background-color: #7FAF8B;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.addrAddBtn:hover {
+    background-color: #6c9d77;
+}
+
+/* 목록 */
+.addrList {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* 빈 목록 */
+.addrEmpty {
+    padding: 70px 20px;
+    border: 1px solid #dfeee2;
+    border-radius: 22px;
+    background-color: #fff;
+    text-align: center;
+    color: #777;
+    font-size: 15px;
+    box-shadow: 0 6px 18px rgba(127, 175, 139, 0.08);
+}
+
+/* 카드 */
+.addrCard {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12px 24px;
+    min-height: 150px;
+    padding: 28px 26px;
+    border: 1px solid #dfeee2;
+    border-radius: 22px;
+    background-color: #fff;
+    box-shadow: 0 8px 22px rgba(127, 175, 139, 0.08);
+    box-sizing: border-box;
+    transition: 0.2s;
+}
+
+.addrCard:hover {
+    border-color: #AFCBB1;
+    background-color: #F7FBF7;
+}
+
+/* 카드 상단 */
+.addrCardTop {
+    grid-column: 1;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+/* 배송지명 */
+.addrName {
+    font-size: 20px;
+    font-weight: 800;
+    color: #17251c;
+}
+
+/* 기본 배송지 뱃지 */
+.baseBadge {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 10px;
+    padding: 5px 10px;
+    border-radius: 999px;
+    background-color: #EAF6EC;
+    color: #5f936d;
+    font-size: 12px;
+    font-weight: 700;
+    vertical-align: middle;
+}
+
+/* 정보 */
+.addrInfo {
+    grid-column: 1;
+    margin: 0;
+}
+
+/* 정보 텍스트 */
+.addrInfo p {
+    margin: 7px 0;
+    font-size: 15px;
+    color: #3f4f43;
+    line-height: 1.5;
+    word-break: keep-all;
+}
+
+/* 버튼 영역 */
+.addrBtnBox {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: end;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    min-width: max-content;
+}
+
+/* 공통 버튼 */
+.addrSubBtn,
+.addrDeleteBtn {
+    min-width: 82px;
+    height: 38px;
+    padding: 0 14px;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* 수정/기본 배송지 버튼 */
+.addrSubBtn {
+    background-color: #F1F7F2;
+    color: #4f7a57;
+}
+
+.addrSubBtn:hover {
+    background-color: #E3EEE5;
+}
+
+/* 삭제 버튼 */
+.addrDeleteBtn {
+    background-color: #F3F5F3;
+    color: #6f7f72;
+}
+
+.addrDeleteBtn:hover {
+    background-color: #E8ECE8;
+}
+
+/* 기본 배송지 설정 버튼 */
+.addrBtnBox .addrSubBtn:first-child:not(:only-child) {
+    min-width: 126px;
+}
+
+/* 태블릿 */
+@media (max-width: 1024px) {
+    .addrTitle {
+        font-size: 26px;
+    }
+
+    .addrCard {
+        padding: 24px;
+    }
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+    .addrHeader {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+    }
+
+    .addrAddBtn {
+        width: 100%;
+    }
+
+    .addrCard {
+        display: block;
+        padding: 22px;
+    }
+
+    .addrCardTop {
+        margin-bottom: 14px;
+    }
+
+    .addrInfo {
+        margin-bottom: 18px;
+    }
+
+    .addrBtnBox {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 8px;
+        min-width: 0;
+    }
+
+    .addrSubBtn,
+    .addrDeleteBtn {
+        flex: 1;
+        min-width: 0;
+    }
+}
+
+/* 작은 모바일 */
+@media (max-width: 480px) {
+    .addrPage {
+        padding-bottom: 50px;
+    }
+
+    .addrTitle {
+        font-size: 24px;
+    }
+
+    .addrDesc {
+        font-size: 14px;
+    }
+
+    .addrCard {
+        padding: 20px;
+        border-radius: 18px;
+    }
+
+    .addrName {
+        font-size: 18px;
+    }
+
+    .baseBadge {
+        margin-left: 6px;
+        padding: 4px 8px;
+        font-size: 12px;
+    }
+
+    .addrInfo p {
+        font-size: 14px;
+    }
+
+    .addrBtnBox {
+        gap: 7px;
+    }
+}

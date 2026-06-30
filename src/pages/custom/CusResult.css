@@ -1,0 +1,593 @@
+/* CusResult - AI 추천 결과 화면 */
+.cus-wrap {
+    width: 100%;
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: 4px 0 42px;
+    box-sizing: border-box;
+    color: #333;
+}
+
+/* 상단 헤더 */
+.cus-header {
+    position: relative;
+    margin-bottom: 24px;
+    padding: 34px 34px 32px;
+    border: 1px solid #e3eee6;
+    border-radius: 24px;
+    background: linear-gradient(135deg, #f5fbf7 0%, #ffffff 58%, #eef8f1 100%);
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+
+.cus-header__badge {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    height: 30px;
+    padding: 0 13px;
+    margin-bottom: 14px;
+    border-radius: 999px;
+    background-color: #e8f3eb;
+    color: #5d936a;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: -0.2px;
+}
+
+.cus-header__title {
+    position: relative;
+    z-index: 1;
+    margin: 0 0 10px;
+    font-size: 30px;
+    line-height: 1.25;
+    font-weight: 800;
+    color: #24382a;
+    letter-spacing: -0.7px;
+}
+
+.cus-header__subtitle {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #526359;
+}
+
+.cus-header__date {
+    position: relative;
+    z-index: 1;
+    margin: 10px 0 0;
+    font-size: 14px;
+    color: #8a958d;
+}
+
+/* 본문 */
+.cus-body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* 공통 카드 */
+.cus-card,
+.cus-section {
+    width: 100%;
+    padding: 28px;
+    background-color: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+.cus-card__head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.cus-card__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 12px;
+    background-color: #eef8f1;
+    color: #6d9f78;
+    flex: 0 0 34px;
+}
+
+.cus-card__icon svg,
+.cus-section__title svg,
+.cus-btn svg,
+.cus-cart-btn__icon svg {
+    width: 18px;
+    height: 18px;
+    stroke-width: 2.3;
+}
+
+.cus-card__title,
+.cus-section__title {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 800;
+    color: #24382a;
+    letter-spacing: -0.3px;
+}
+
+.cus-card__content {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.75;
+    color: #555;
+    white-space: pre-line;
+    word-break: keep-all;
+}
+
+.cus-card--summary {
+    border-color: #dfeee3;
+}
+
+.cus-card--reason {
+    background-color: #fcfefc;
+}
+
+.cus-card--caution .cus-card__icon {
+    background-color: #fff3ef;
+    color: #d57955;
+}
+
+/* 추천 상품 섹션 */
+.cus-section {
+    padding: 0;
+    overflow: hidden;
+}
+
+.cus-section__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 24px 28px;
+    border-bottom: 1px solid #f0f0f0;
+    box-sizing: border-box;
+}
+
+.cus-section__title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cus-section__title svg {
+    color: #7FAF8B;
+}
+
+.cus-items {
+    padding: 4px 28px 8px;
+}
+
+.cus-item {
+    display: grid;
+    grid-template-columns: 42px 76px minmax(0, 1fr) 112px;
+    align-items: center;
+    gap: 14px;
+    min-height: 106px;
+    padding: 16px 0;
+    border-bottom: 1px solid #f0f0f0;
+    box-sizing: border-box;
+}
+
+.cus-item:last-child {
+    border-bottom: none;
+}
+
+.cus-item__rank {
+    display: flex;
+    justify-content: center;
+}
+
+.cus-item__rank-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #7FAF8B;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.cus-item__img-wrap {
+    width: 76px;
+    height: 76px;
+    border: 1px solid #eeeeee;
+    border-radius: 16px;
+    background-color: #f8f8f8;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.cus-item__img-wrap:hover {
+    border-color: #cfe5d4;
+    transform: translateY(-1px);
+}
+
+.cus-item__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cus-item__info {
+    min-width: 0;
+    cursor: pointer;
+}
+
+.cus-item__name {
+    margin: 0 0 8px;
+    font-size: 16px;
+    font-weight: 800;
+    color: #333;
+    line-height: 1.35;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cus-item__info:hover .cus-item__name {
+    color: #5d936a;
+}
+
+.cus-item__price {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 700;
+    color: #777;
+}
+
+/* 버튼 공통 */
+.cus-btn,
+.cus-all-cart-btn,
+.cus-cart-btn {
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+.cus-all-cart-btn,
+.cus-cart-btn,
+.cus-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    height: 42px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.cus-all-cart-btn {
+    min-width: 104px;
+    padding: 0 16px;
+    background-color: #7FAF8B;
+    color: #fff;
+}
+
+.cus-all-cart-btn:hover:not(:disabled) {
+    background-color: #6d9f78;
+}
+
+.cus-cart-btn {
+    width: 112px;
+    padding: 0 12px;
+    background-color: #7FAF8B;
+    color: #fff;
+    flex-shrink: 0;
+}
+
+.cus-cart-btn:hover:not(:disabled) {
+    background-color: #6d9f78;
+}
+
+.cus-cart-btn__icon {
+    display: inline-flex;
+    align-items: center;
+}
+
+.cus-all-cart-btn:disabled,
+.cus-cart-btn:disabled {
+    cursor: default;
+}
+
+.cus-all-cart-btn--loading,
+.cus-cart-btn--loading {
+    background-color: #b8cbbb;
+}
+
+.cus-all-cart-btn--done,
+.cus-cart-btn--done {
+    background-color: #5d936a;
+}
+
+.cus-all-cart-btn--error,
+.cus-cart-btn--error {
+    background-color: #d9534f;
+}
+
+/* 복용 가이드 + 주의사항 */
+.cus-guide-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.cus-guide-row .cus-card {
+    height: 100%;
+}
+
+/* 하단 액션 버튼 */
+.cus-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.cus-btn {
+    min-width: 160px;
+    padding: 0 24px;
+    height: 48px;
+    font-size: 15px;
+    background-color: #fff;
+    border: 1px solid #dfe8e1;
+    color: #526359;
+}
+
+.cus-btn:hover {
+    border-color: #7FAF8B;
+    color: #5d936a;
+    background-color: #f7fbf8;
+}
+
+.cus-btn--cart {
+    background-color: #7FAF8B;
+    border-color: #7FAF8B;
+    color: #fff;
+}
+
+.cus-btn--cart:hover {
+    background-color: #6d9f78;
+    border-color: #6d9f78;
+    color: #fff;
+}
+
+.cus-btn--back {
+    margin-top: 16px;
+    background-color: #7FAF8B;
+    border-color: #7FAF8B;
+    color: #fff;
+}
+
+.cus-btn--back:hover {
+    background-color: #6d9f78;
+    color: #fff;
+}
+
+/* 로딩 / 에러 */
+.cus-loading-wrap,
+.cus-error-wrap {
+    width: 100%;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.cus-loading-spinner {
+    width: 34px;
+    height: 34px;
+    border: 3px solid #e6eee8;
+    border-top-color: #7FAF8B;
+    border-radius: 50%;
+    animation: cusSpin 0.8s linear infinite;
+}
+
+@keyframes cusSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.cus-loading-text,
+.cus-error-text {
+    margin: 14px 0 0;
+    font-size: 15px;
+    color: #7a857c;
+}
+
+.cus-error-text {
+    color: #d9534f;
+    font-weight: 700;
+}
+
+/* 태블릿 */
+@media (max-width: 1024px) {
+    .cus-wrap {
+        max-width: 100%;
+    }
+
+    .cus-header {
+        padding: 30px 28px;
+    }
+
+    .cus-card,
+    .cus-section__head {
+        padding-left: 26px;
+        padding-right: 26px;
+    }
+
+    .cus-items {
+        padding-left: 26px;
+        padding-right: 26px;
+    }
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+    .cus-wrap {
+        padding-bottom: 30px;
+    }
+
+    .cus-header {
+        margin-bottom: 20px;
+        padding: 28px 24px;
+        border-radius: 20px;
+    }
+
+    .cus-header__title {
+        font-size: 25px;
+    }
+
+    .cus-header__subtitle {
+        font-size: 15px;
+    }
+
+    .cus-card,
+    .cus-section__head {
+        padding: 24px;
+    }
+
+    .cus-guide-row {
+        grid-template-columns: 1fr;
+    }
+
+    .cus-section__head {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .cus-all-cart-btn {
+        width: 100%;
+    }
+
+    .cus-items {
+        padding: 0 24px;
+    }
+
+    .cus-item {
+        grid-template-columns: 34px 68px minmax(0, 1fr);
+        gap: 12px;
+        min-height: 100px;
+        position: relative;
+        padding: 16px 0 62px;
+    }
+
+    .cus-item__rank-num {
+        width: 28px;
+        height: 28px;
+        font-size: 13px;
+    }
+
+    .cus-item__img-wrap {
+        width: 68px;
+        height: 68px;
+        border-radius: 14px;
+    }
+
+    .cus-cart-btn {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 16px;
+        width: 100%;
+    }
+
+    .cus-actions {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .cus-btn {
+        width: 100%;
+    }
+}
+
+/* 작은 모바일 */
+@media (max-width: 480px) {
+    .cus-header {
+        padding: 24px 20px;
+    }
+
+    .cus-header__title {
+        font-size: 22px;
+    }
+
+    .cus-header__badge {
+        height: 28px;
+        font-size: 12px;
+    }
+
+    .cus-card,
+    .cus-section__head {
+        padding: 22px 18px;
+    }
+
+    .cus-card__title,
+    .cus-section__title {
+        font-size: 18px;
+    }
+
+    .cus-card__content {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .cus-items {
+        padding: 0 18px;
+    }
+
+    .cus-item {
+        grid-template-columns: 30px 60px minmax(0, 1fr);
+        gap: 10px;
+        padding-bottom: 58px;
+    }
+
+    .cus-item__img-wrap {
+        width: 60px;
+        height: 60px;
+        border-radius: 12px;
+    }
+
+    .cus-item__name {
+        font-size: 14px;
+    }
+
+    .cus-item__price {
+        font-size: 13px;
+    }
+
+    .cus-btn,
+    .cus-all-cart-btn,
+    .cus-cart-btn {
+        height: 42px;
+        font-size: 13px;
+    }
+}

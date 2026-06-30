@@ -1,0 +1,1696 @@
+.adminPage {
+    display: flex;
+    width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #f3fbf6 0%, #fbfdf9 48%, #eef8f1 100%);
+    color: #26342f;
+}
+
+.adminSidebar {
+    display: flex;
+    flex-direction: column;
+    width: 270px;
+    flex-shrink: 0;
+    min-height: 100vh;
+    padding: 32px 22px;
+    box-sizing: border-box;
+    border-right: 1px solid #dcebe2;
+    background: rgba(246, 253, 248, 0.92);
+}
+
+.adminBrand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 4px 6px 30px;
+}
+
+.adminBrandIcon,
+.adminProfileAvatar,
+.adminHeroBubble,
+.adminEmptyIcon,
+.adminFeatureIcon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #dff4e7, #ffffff);
+    color: #4f9a6a;
+    font-weight: 800;
+}
+
+.adminBrandIcon {
+    width: 46px;
+    height: 46px;
+    box-shadow: 0 10px 24px rgba(93, 151, 111, 0.16);
+}
+
+.adminBrand h2 {
+    margin: 0;
+    color: #73b989;
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 0;
+}
+
+.adminBrand p {
+    margin: 4px 0 0;
+    color: #7b8f86;
+    font-size: 13px;
+}
+
+.adminMenu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.adminMenuBtn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 14px 16px;
+    border: 0;
+    border-radius: 14px;
+    background-color: transparent;
+    color: #4d5f57;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: left;
+    cursor: pointer;
+}
+
+.adminMenuBtn:hover,
+.adminMenuBtn.active {
+    background-color: #dff2e5;
+    color: #2f8350;
+}
+
+.adminMenuMark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 10px;
+    border: 1px solid #cfe5d6;
+    color: #5fa876;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.adminMenuBtn.active .adminMenuMark {
+    border-color: #87c79b;
+    background-color: #ffffff;
+}
+
+.adminProfileCard {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: auto;
+    padding: 16px;
+    border: 1px solid #d7eadf;
+    border-radius: 18px;
+    background-color: #ffffff;
+    box-shadow: 0 14px 34px rgba(99, 139, 113, 0.12);
+}
+
+.adminProfileAvatar {
+    width: 42px;
+    height: 42px;
+    font-size: 13px;
+}
+
+.adminProfileCard strong {
+    display: block;
+    color: #2f5f40;
+    font-size: 14px;
+}
+
+.adminProfileCard p {
+    margin: 4px 0 0;
+    color: #83928b;
+    font-size: 13px;
+}
+
+.adminContent {
+    flex: 1;
+    min-width: 0;
+    min-height: 100vh;
+    padding: 42px 48px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.52);
+}
+
+.adminPageHeader {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 28px;
+}
+
+.adminPageHeader h1 {
+    margin: 0 0 10px;
+    color: #202c27;
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.adminPageHeader p {
+    margin: 0;
+    color: #718179;
+    font-size: 15px;
+}
+
+.adminHeaderActions {
+    display: flex;
+    gap: 12px;
+}
+
+.adminHeaderActions button,
+.adminPrimaryBtn {
+    min-height: 44px;
+    padding: 0 18px;
+    border: 1px solid #cfe1d5;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #53665d;
+    font-weight: 700;
+}
+
+.adminPrimaryBtn {
+    border-color: #6eaf80;
+    background-color: #6eaf80;
+    color: #ffffff;
+}
+
+.adminPrimaryBtn:hover {
+    border-color: #5f9f70;
+    background-color: #5f9f70;
+    box-shadow: 0 8px 18px rgba(82, 142, 99, 0.22);
+}
+
+.adminPrimaryBtn:active {
+    border-color: #4f8f60;
+    background-color: #4f8f60;
+    box-shadow: 0 3px 8px rgba(82, 142, 99, 0.18);
+    transform: translateY(1px);
+}
+
+.adminSecondaryBtn,
+.adminDangerBtn {
+    min-height: 40px;
+    padding: 0 16px;
+    border-radius: 10px;
+    font-weight: 800;
+}
+
+.adminSecondaryBtn {
+    border: 1px solid #cfe1d5;
+    background-color: #ffffff;
+    color: #53665d;
+}
+
+.adminDangerBtn {
+    border: 1px solid #df8f8f;
+    background-color: #fff7f7;
+    color: #b04444;
+}
+
+.adminSecondaryBtn:disabled,
+.adminDangerBtn:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+}
+
+.adminHeroCard,
+.adminPanel,
+.adminOpsSection,
+.adminFilterCard,
+.adminEmptyCard,
+.adminFeatureCard,
+.adminSummaryCard,
+.adminStatusCard,
+.adminMetricCard,
+.adminChartCard {
+    border: 1px solid #dbe9e0;
+    border-radius: 22px;
+    background-color: #ffffff;
+    box-shadow: 0 16px 36px rgba(84, 118, 96, 0.1);
+    box-sizing: border-box;
+}
+
+.adminHeroCard {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+    min-height: 190px;
+    padding: 34px 42px;
+    background:
+        radial-gradient(circle at 88% 18%, rgba(157, 210, 174, 0.32), transparent 28%),
+        linear-gradient(135deg, #eef9f1 0%, #ffffff 100%);
+}
+
+.adminHeroBadge {
+    display: inline-flex;
+    margin-bottom: 12px;
+    padding: 7px 12px;
+    border-radius: 999px;
+    background-color: #dff2e7;
+    color: #3f915b;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.adminHeroCard h2 {
+    max-width: 720px;
+    margin: 0;
+    color: #24322c;
+    font-size: 30px;
+    line-height: 1.35;
+}
+
+.adminHeroCard p {
+    margin: 14px 0 0;
+    color: #6f8178;
+    font-size: 15px;
+}
+
+.adminHeroBubble {
+    width: 116px;
+    height: 116px;
+    font-size: 30px;
+    box-shadow: 0 18px 40px rgba(94, 151, 111, 0.2);
+}
+
+.adminSummaryGrid,
+.adminFeatureGrid,
+.adminStatusGrid,
+.adminMetricGrid,
+.adminDashboardGrid {
+    display: grid;
+    gap: 18px;
+    margin-top: 24px;
+}
+
+.adminSummaryGrid,
+.adminMetricGrid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.adminSummaryGrid.compact {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.adminFeatureGrid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.adminCsTabGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.adminStatusGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.adminDashboardGrid,
+.adminMetricGrid.twoCol {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.adminSummaryCard,
+.adminStatusCard,
+.adminFeatureCard,
+.adminMetricCard {
+    padding: 24px;
+}
+
+.adminCardLabel,
+.adminStatusCard span,
+.adminMetricCard span {
+    display: block;
+    color: #77877f;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.adminSummaryCard strong,
+.adminStatusCard strong,
+.adminMetricCard strong {
+    display: block;
+    margin-top: 10px;
+    color: #26342f;
+    font-size: 24px;
+}
+
+.adminMetricCard em {
+    display: block;
+    margin-top: 10px;
+    color: #5f756a;
+    font-size: 12px;
+    font-style: normal;
+    line-height: 1.5;
+}
+
+.adminSummaryCard p,
+.adminFeatureCard p,
+.adminMetricCard p {
+    margin: 12px 0 0;
+    color: #788982;
+    line-height: 1.6;
+}
+
+.adminCsTabCard {
+    width: 100%;
+    min-height: 168px;
+    border-color: #dbe9e0;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+}
+
+.adminCsTabCard:hover,
+.adminCsTabCard.active {
+    border-color: #87c79b;
+    background-color: #f5fbf7;
+    box-shadow: 0 18px 40px rgba(84, 118, 96, 0.14);
+}
+
+.adminCsTabCard.active .adminFeatureIcon {
+    background: linear-gradient(145deg, #78b88d, #e7f6ec);
+    color: #ffffff;
+}
+
+.adminCsTabCard.active strong {
+    background-color: #dff2e5;
+    color: #2f8350;
+}
+
+.adminPanel,
+.adminOpsSection,
+.adminFilterCard,
+.adminEmptyCard {
+    margin-top: 24px;
+    padding: 26px;
+}
+
+.adminPanelHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+.adminPanelHeader h3,
+.adminFeatureCard h3,
+.adminEmptyCard h3 {
+    margin: 0;
+    color: #25332d;
+    font-size: 20px;
+}
+
+.adminPanelHeader p {
+    margin: 8px 0 0;
+    color: #7b8b83;
+    font-size: 14px;
+}
+
+.adminPanelHeader span,
+.adminFeatureCard strong {
+    display: inline-flex;
+    padding: 7px 12px;
+    border-radius: 999px;
+    background-color: #e6f5eb;
+    color: #4c9b64;
+    font-size: 13px;
+}
+
+.adminGuideList {
+    display: grid;
+    gap: 12px;
+}
+
+.adminGuideItem {
+    padding: 16px 18px;
+    border-radius: 14px;
+    background-color: #f5fbf7;
+    color: #53665e;
+}
+
+.adminFilterCard {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.4fr auto;
+    align-items: end;
+    gap: 16px;
+}
+
+.adminOrderFilterCard {
+    grid-template-columns: 2fr 1fr 2fr auto;
+}
+
+.adminField label {
+    display: block;
+    margin-bottom: 8px;
+    color: #51645b;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.adminField input,
+.adminField select {
+    width: 100%;
+    min-height: 44px;
+    padding: 0 14px;
+    border: 1px solid #d9e6de;
+    border-radius: 10px;
+    background-color: #fbfdfb;
+    color: #7b8b83;
+    box-sizing: border-box;
+}
+
+.adminEmptyCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 260px;
+    text-align: center;
+}
+
+.adminEmptyIcon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 18px;
+}
+
+.adminEmptyCard p {
+    max-width: 520px;
+    margin: 12px 0 0;
+    color: #788982;
+}
+
+.adminFeatureIcon {
+    width: 54px;
+    height: 54px;
+    margin-bottom: 18px;
+}
+
+.adminDashboard {
+    display: grid;
+    gap: 0;
+}
+
+.adminDashboardNotice {
+    margin-bottom: 18px;
+    padding: 12px 16px;
+    border: 1px solid #d7eadf;
+    border-radius: 14px;
+    background-color: #f5fbf7;
+    color: #4f665b;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.adminMiniMetricList {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.adminMiniMetricList .adminMetricCard {
+    padding: 18px;
+}
+
+.adminMiniMetricList .adminMetricCard strong {
+    font-size: 20px;
+}
+
+.adminChartCard {
+    position: relative;
+    min-height: 190px;
+    padding: 20px;
+    overflow: hidden;
+    background:
+        linear-gradient(180deg, rgba(246, 252, 248, 0.8), rgba(255, 255, 255, 0.98)),
+        repeating-linear-gradient(
+            to bottom,
+            transparent 0,
+            transparent 38px,
+            rgba(203, 224, 211, 0.52) 39px,
+            transparent 40px
+        );
+}
+
+.adminChartCard > span {
+    position: absolute;
+    right: 18px;
+    bottom: 16px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background-color: #e8f6ed;
+    color: #4c9b64;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.adminLineChart {
+    width: 100%;
+    height: 150px;
+    overflow: visible;
+}
+
+.adminLineChart polyline {
+    fill: none;
+    stroke: #69aa7c;
+    stroke-width: 8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.adminLineChart line {
+    stroke: #d5e5db;
+    stroke-width: 2;
+}
+
+.adminLineChart circle {
+    fill: #4f9b66;
+}
+
+.adminLinePoint {
+    cursor: default;
+}
+
+.adminLineTooltip {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.16s ease;
+}
+
+.adminLinePoint:hover .adminLineTooltip,
+.adminLinePoint:focus .adminLineTooltip {
+    opacity: 1;
+}
+
+.adminLineTooltip rect {
+    fill: #ffffff;
+    stroke: #cfe5d6;
+    filter: drop-shadow(0 8px 14px rgba(54, 82, 65, 0.16));
+}
+
+.adminLineChart .adminLineTooltip text {
+    fill: #2f8350;
+    font-size: 11px;
+    font-weight: 900;
+}
+
+.adminLineChart text {
+    fill: #687970;
+    font-size: 11px;
+    font-weight: 800;
+    text-anchor: middle;
+}
+
+.adminBarChart {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    gap: 12px;
+    height: 150px;
+    padding: 12px 8px 0;
+}
+
+.adminBarChart span {
+    width: 12px;
+    min-width: 12px;
+    border-radius: 12px 12px 4px 4px;
+    background: linear-gradient(180deg, #6fb682 0%, #d8efdf 100%);
+}
+
+.adminBarItem {
+    position: relative;
+    display: flex;
+    width: 34px;
+    min-width: 34px;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    text-align: center;
+}
+
+.adminBarItem em {
+    position: absolute;
+    bottom: calc(100% - 24px);
+    left: 50%;
+    z-index: 1;
+    width: max-content;
+    padding: 6px 9px;
+    border: 1px solid #cfe5d6;
+    border-radius: 999px;
+    background-color: #ffffff;
+    color: #2f8350;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 900;
+    box-shadow: 0 8px 14px rgba(54, 82, 65, 0.16);
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -6px);
+    transition: opacity 0.16s ease;
+}
+
+.adminBarItem:hover em,
+.adminBarItem:focus-within em {
+    opacity: 1;
+}
+
+.adminBarChart .adminBarItem span {
+    flex: 0 0 auto;
+    min-height: 0;
+}
+
+.adminBarItem strong {
+    color: #687970;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.adminOrderChartCard {
+    min-height: 278px;
+    padding: 24px 18px;
+}
+
+.adminOrderChartCard .adminBarChart {
+    width: 100%;
+    height: 233px;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 16px 4px 0;
+}
+
+.adminOrderChartCard .adminBarItem {
+    flex: 1;
+    width: auto;
+    min-width: 24px;
+}
+
+.adminOrderChartCard .adminBarChart span {
+    width: 10px;
+    min-width: 10px;
+}
+
+.adminTopProductsSection {
+    min-width: 0;
+}
+
+.adminTopProductsTable {
+    overflow-x: hidden;
+    margin-top: 18px;
+    border: 1px solid #e0ece5;
+    border-radius: 16px;
+}
+
+.adminTopProductsHead,
+.adminTopProductsRow {
+    display: grid;
+    grid-template-columns: 70px minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.adminTopProductsHead {
+    background-color: #f3faf5;
+    color: #4f665b;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.adminTopProductsHead span,
+.adminTopProductsRow span {
+    padding: 14px 16px;
+    border-bottom: 1px solid #e5efe9;
+    text-align: center;
+}
+
+.adminTopProductsRow {
+    color: #53665d;
+    font-size: 14px;
+}
+
+.adminTopProductsBody .adminTopProductsRow:last-child span {
+    border-bottom: 0;
+}
+
+.adminUsersTable {
+    overflow-x: auto;
+    border: 1px solid #e0ece5;
+    border-radius: 16px;
+}
+
+.adminUsersHead,
+.adminUsersRow {
+    display: grid;
+    grid-template-columns: 90px minmax(120px, 1fr) minmax(100px, 1fr) minmax(140px, 1fr) 90px 90px minmax(140px, 1fr) minmax(140px, 1fr) minmax(140px, 1fr);
+    min-width: 1060px;
+}
+
+.adminUsersHead {
+    background-color: #f3faf5;
+    color: #4f665b;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.adminUsersHead span,
+.adminUsersRow span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 16px;
+    border-bottom: 1px solid #e5efe9;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.adminUsersRow {
+    color: #53665d;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.adminUsersRow:hover,
+.adminUsersRow:focus-visible {
+    background-color: #f8fcf9;
+    outline: none;
+}
+
+.adminUsersBody .adminUsersRow:last-child span {
+    border-bottom: 0;
+}
+
+.adminProductsTable {
+    overflow-x: auto;
+    border: 1px solid #e0ece5;
+    border-radius: 16px;
+}
+
+.adminProductsHead,
+.adminProductsRow {
+    display: grid;
+    grid-template-columns: 96px 90px minmax(180px, 1.4fr) minmax(120px, 1fr) minmax(130px, 1fr) minmax(110px, 1fr) 90px minmax(140px, 1fr) minmax(140px, 1fr) minmax(140px, 1fr);
+    min-width: 1240px;
+}
+
+.adminProductsHead {
+    background-color: #f3faf5;
+    color: #4f665b;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.adminProductsHead span,
+.adminProductsRow span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    padding: 14px 16px;
+    border-bottom: 1px solid #e5efe9;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.adminProductsRow {
+    color: #53665d;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.adminProductsRow:hover,
+.adminProductsRow:focus-visible {
+    background-color: #f8fcf9;
+    outline: none;
+}
+
+.adminProductsBody .adminProductsRow:last-child span {
+    border-bottom: 0;
+}
+
+.adminOrdersTable {
+    overflow-x: auto;
+    border: 1px solid #e0ece5;
+    border-radius: 16px;
+}
+
+.adminOrdersHead,
+.adminOrdersRow {
+    display: grid;
+    grid-template-columns: minmax(160px, 1.2fr) minmax(180px, 1.3fr) minmax(120px, 1fr) minmax(110px, 1fr) minmax(120px, 1fr) 100px minmax(140px, 1fr) minmax(140px, 1fr);
+    min-width: 1080px;
+}
+
+.adminOrdersHead {
+    background-color: #f3faf5;
+    color: #4f665b;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.adminOrdersHead span,
+.adminOrdersRow span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    padding: 14px 16px;
+    border-bottom: 1px solid #e5efe9;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.adminOrdersRow {
+    color: #53665d;
+    font-size: 14px;
+}
+
+.adminOrdersBody .adminOrdersRow:last-child span {
+    border-bottom: 0;
+}
+
+.adminReviewFilterCard {
+    grid-template-columns: 2fr 1fr 2fr auto;
+}
+
+.adminReviewsTable {
+    overflow-x: auto;
+    border: 1px solid #e0ece5;
+    border-radius: 16px;
+}
+
+.adminReviewsHead,
+.adminReviewsRow {
+    display: grid;
+    grid-template-columns: 90px 90px minmax(160px, 1.2fr) minmax(120px, 1fr) minmax(110px, 1fr) 80px minmax(220px, 1.6fr) 100px minmax(140px, 1fr) minmax(140px, 1fr);
+    min-width: 1250px;
+}
+
+.adminReviewsHead {
+    background-color: #f3faf5;
+    color: #4f665b;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.adminReviewsHead span,
+.adminReviewsRow span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    padding: 14px 16px;
+    border-bottom: 1px solid #e5efe9;
+    text-align: center;
+}
+
+.adminReviewsRow {
+    color: #53665d;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.adminReviewsRow:hover,
+.adminReviewsRow:focus-visible {
+    outline: none;
+    background-color: #f6fbf7;
+    box-shadow: inset 4px 0 0 #6bb27b;
+}
+
+.adminReviewsRow.hasReply {
+    background-color: #fbfefc;
+}
+
+.adminReviewsBody .adminReviewsRow:last-child span {
+    border-bottom: 0;
+}
+
+.adminReviewsRow .adminReviewContent {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    min-width: 0;
+    padding: 14px 16px;
+    border: 0;
+    border-bottom: 1px solid #e5efe9;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.adminReviewsRow:hover .adminReviewContent,
+.adminReviewsRow:focus-visible .adminReviewContent {
+    color: #3d8b55;
+}
+
+.adminReviewsBody .adminReviewsRow:last-child .adminReviewContent {
+    border-bottom: 0;
+}
+
+.adminReviewReplyBadge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 64px;
+    min-height: 26px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 900;
+}
+
+.adminReviewReplyBadge.done {
+    background-color: #e8f6ec;
+    color: #2f8f4f;
+}
+
+.adminReviewReplyBadge.pending {
+    background-color: #f3f6f4;
+    color: #7a8a82;
+}
+
+.adminCsInquiryFilterCard {
+    grid-template-columns: 2fr 1fr 1fr 2fr auto;
+}
+
+.adminCsListFilterCard {
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 18px;
+}
+
+.adminCsFaqListFilterCard {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.adminPanelActions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.adminDateRangeInputs {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    gap: 8px;
+    align-items: center;
+}
+
+.adminDateRangeInputs span {
+    color: #7b8f85;
+    font-weight: 800;
+}
+
+.adminCsNoticesTable,
+.adminCsFaqsTable {
+    overflow-x: auto;
+    border: 1px solid #e0ece5;
+    border-radius: 16px;
+}
+
+.adminCsNoticesHead,
+.adminCsNoticesRow {
+    display: grid;
+    grid-template-columns: 90px minmax(260px, 1.8fr) 100px 90px minmax(140px, 1fr);
+    min-width: 760px;
+}
+
+.adminCsFaqsHead,
+.adminCsFaqsRow {
+    display: grid;
+    grid-template-columns: 90px minmax(120px, 1fr) minmax(260px, 1.8fr) 100px 90px minmax(140px, 1fr);
+    min-width: 900px;
+}
+
+.adminCsNoticesHead,
+.adminCsFaqsHead {
+    background-color: #f3faf5;
+    color: #4f665b;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.adminCsNoticesHead span,
+.adminCsNoticesRow span,
+.adminCsFaqsHead span,
+.adminCsFaqsRow span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    padding: 14px 16px;
+    border-bottom: 1px solid #e5efe9;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.adminCsNoticesRow,
+.adminCsFaqsRow {
+    color: #53665d;
+    font-size: 14px;
+}
+
+.adminCsNoticesRow:hover,
+.adminCsFaqsRow:hover,
+.adminCsInquiriesRow:hover {
+    background-color: #f0faf4;
+    box-shadow: inset 4px 0 0 #6eaf80;
+}
+
+.adminCsNoticesBody .adminCsNoticesRow:last-child span,
+.adminCsFaqsBody .adminCsFaqsRow:last-child span {
+    border-bottom: 0;
+}
+
+.adminCsNoticesRow .adminCsListTitle,
+.adminCsFaqsRow .adminCsListTitle {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.adminCsListTitle button {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #2f4a3a;
+    font: inherit;
+    font-weight: 400;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.adminCsListTitle button:hover,
+.adminCsListTitle button:focus-visible {
+    color: #4c9b64;
+    text-decoration: underline;
+    outline: none;
+}
+
+.adminCsInquiriesTable {
+    overflow-x: auto;
+    border: 1px solid #e0ece5;
+    border-radius: 16px;
+}
+
+.adminCsInquiriesHead,
+.adminCsInquiriesRow {
+    display: grid;
+    grid-template-columns: 90px minmax(220px, 1.6fr) minmax(120px, 1fr) minmax(110px, 1fr) minmax(110px, 1fr) 100px 80px minmax(140px, 1fr) minmax(140px, 1fr) minmax(140px, 1fr);
+    min-width: 1240px;
+}
+
+.adminCsInquiriesHead {
+    background-color: #f3faf5;
+    color: #4f665b;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.adminCsInquiriesHead span,
+.adminCsInquiriesRow span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    padding: 14px 16px;
+    border-bottom: 1px solid #e5efe9;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.adminCsInquiriesRow {
+    color: #53665d;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.adminCsInquiriesRow:focus-visible {
+    outline: none;
+    background-color: #f0faf4;
+    box-shadow: inset 4px 0 0 #6eaf80;
+}
+
+.adminCsInquiriesBody .adminCsInquiriesRow:last-child span {
+    border-bottom: 0;
+}
+
+.adminCsInquiriesRow .adminCsInquiryTitle {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.adminUsersBody .adminUsersRow span,
+.adminProductsBody .adminProductsRow span,
+.adminOrdersBody .adminOrdersRow span,
+.adminReviewsBody .adminReviewsRow span,
+.adminCsNoticesBody .adminCsNoticesRow span,
+.adminCsFaqsBody .adminCsFaqsRow span,
+.adminCsInquiriesBody .adminCsInquiriesRow span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.adminReviewsBody .adminReviewsRow .adminReviewContent,
+.adminCsNoticesBody .adminCsNoticesRow .adminCsListTitle,
+.adminCsFaqsBody .adminCsFaqsRow .adminCsListTitle,
+.adminCsInquiriesBody .adminCsInquiriesRow .adminCsInquiryTitle {
+    display: block;
+    align-self: center;
+    text-align: center;
+}
+
+.adminCsNoticesBody .adminCsListTitle button,
+.adminCsFaqsBody .adminCsListTitle button {
+    text-align: center;
+}
+
+.adminModalOverlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background-color: rgba(32, 44, 39, 0.34);
+}
+
+.adminCsDetailModal {
+    position: relative;
+    width: min(760px, 100%);
+    max-height: calc(100vh - 48px);
+    overflow-y: auto;
+    border: 1px solid #dbe9e0;
+    border-radius: 16px;
+    background-color: #ffffff;
+    box-shadow: 0 24px 70px rgba(54, 82, 65, 0.22);
+}
+
+.adminCsDetailHeader {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 24px 26px 18px;
+    border-bottom: 1px solid #e5efe9;
+}
+
+.adminCsDetailHeader h3 {
+    margin: 6px 0 0;
+    color: #25332d;
+    font-size: 22px;
+    line-height: 1.35;
+}
+
+.adminCsDetailType {
+    color: #4c9b64;
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.adminModalCloseBtn {
+    width: 36px;
+    height: 36px;
+    border: 1px solid #dbe9e0;
+    border-radius: 50%;
+    background-color: #f8fcf9;
+    color: #53665d;
+    font-size: 24px;
+    line-height: 1;
+}
+
+.adminCsDetailMeta {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0;
+    margin: 0;
+    padding: 18px 26px;
+    border-bottom: 1px solid #e5efe9;
+}
+
+.adminCsDetailMeta div {
+    display: grid;
+    grid-template-columns: 88px minmax(0, 1fr);
+    gap: 10px;
+    padding: 8px 0;
+}
+
+.adminCsDetailMeta dt {
+    color: #718179;
+    font-weight: 800;
+}
+
+.adminCsDetailMeta dd {
+    margin: 0;
+    color: #35443d;
+}
+
+.adminCsDetailContent {
+    display: grid;
+    gap: 6px;
+    min-height: 160px;
+    padding: 24px 26px;
+    color: #3f5148;
+    line-height: 1.7;
+    white-space: pre-wrap;
+}
+
+.adminUserDetailModal {
+    width: min(920px, 100%);
+}
+
+.adminUserPurchaseSummary {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    padding: 18px 26px;
+    border-bottom: 1px solid #e5efe9;
+}
+
+.adminUserPurchaseSummary div {
+    padding: 16px;
+    border: 1px solid #e0ece5;
+    border-radius: 12px;
+    background-color: #f8fcf9;
+}
+
+.adminUserPurchaseSummary span {
+    display: block;
+    color: #718179;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.adminUserPurchaseSummary strong {
+    display: block;
+    margin-top: 8px;
+    color: #2f8350;
+    font-size: 20px;
+}
+
+.adminUserRecentOrders {
+    padding: 20px 26px;
+    border-bottom: 1px solid #e5efe9;
+}
+
+.adminUserRecentOrders h4 {
+    margin: 0 0 12px;
+    color: #25332d;
+    font-size: 16px;
+}
+
+.adminUserRecentOrdersTable {
+    overflow-x: auto;
+    border: 1px solid #e0ece5;
+    border-radius: 12px;
+}
+
+.adminUserRecentOrdersHead,
+.adminUserRecentOrdersRow {
+    display: grid;
+    grid-template-columns: minmax(140px, 1fr) minmax(150px, 1fr) minmax(100px, 0.8fr) minmax(100px, 0.8fr) minmax(120px, 0.9fr);
+    min-width: 680px;
+}
+
+.adminUserRecentOrdersHead {
+    background-color: #f3faf5;
+    color: #4f665b;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.adminUserRecentOrdersHead span,
+.adminUserRecentOrdersRow span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 14px;
+    border-bottom: 1px solid #e5efe9;
+    text-align: center;
+}
+
+.adminUserRecentOrdersRow {
+    color: #53665d;
+    font-size: 14px;
+}
+
+.adminUserRecentOrdersBody .adminUserRecentOrdersRow:last-child span {
+    border-bottom: 0;
+}
+
+.adminProductDetailModal {
+    width: min(920px, 100%);
+}
+
+.adminProductDetailForm {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    padding: 20px 26px;
+    border-bottom: 1px solid #e5efe9;
+}
+
+.adminProductDetailForm .adminField {
+    min-width: 0;
+}
+
+.adminProductDetailForm .adminField input,
+.adminProductDetailForm .adminField select,
+.adminProductDetailForm .adminField textarea {
+    width: 100%;
+    min-height: 42px;
+    padding: 10px 12px;
+    border: 1px solid #d8e7de;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    color: #35443d;
+    font: inherit;
+}
+
+.adminProductDetailForm .adminField textarea {
+    min-height: 96px;
+    line-height: 1.5;
+    resize: vertical;
+}
+
+.adminProductDetailForm .adminField textarea[readonly] {
+    background-color: #f8fcf9;
+}
+
+.adminProductDetailWideField {
+    grid-column: 1 / -1;
+}
+
+.adminCsCreateForm {
+    display: grid;
+    gap: 18px;
+    padding: 24px 26px 0;
+}
+
+.adminCsCreateForm .adminField textarea {
+    width: 100%;
+    min-height: 180px;
+    padding: 12px 14px;
+    border: 1px solid #d8e7de;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    color: #35443d;
+    font: inherit;
+    line-height: 1.6;
+    resize: vertical;
+}
+
+.adminCsCreateForm .adminField textarea:focus {
+    border-color: #6eaf80;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(110, 175, 128, 0.14);
+}
+
+.adminCsCreateForm .adminDashboardNotice {
+    margin: 0;
+}
+
+.adminReviewDetailContent strong {
+    color: #4f665b;
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.adminCsInquiryAnswerContent {
+    min-height: 100px;
+    border-top: 1px solid #e5efe9;
+}
+
+.adminReviewDetailMessage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    width: max-content;
+    max-width: calc(100% - 52px);
+    margin: 0;
+    border: 1px solid #cce8d4;
+    border-radius: 999px;
+    padding: 14px 22px;
+    background-color: #eef9f1;
+    color: #2f8f4f;
+    font-weight: 900;
+    text-align: center;
+    box-shadow: 0 18px 42px rgba(58, 111, 74, 0.18);
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    animation: adminReviewMessageFade 1.8s ease forwards;
+}
+
+@keyframes adminReviewMessageFade {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -44%);
+    }
+
+    16%,
+    70% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -56%);
+    }
+}
+
+.adminReviewReplyBox {
+    display: grid;
+    gap: 8px;
+    padding: 0 26px 24px;
+}
+
+.adminReviewReplyBox label {
+    color: #4f665b;
+    font-size: 13px;
+    font-weight: 900;
+}
+
+.adminReviewReplyBox textarea {
+    width: 100%;
+    min-height: 120px;
+    resize: vertical;
+    border: 1px solid #dbe9e0;
+    border-radius: 12px;
+    padding: 12px 14px;
+    color: #2d3b34;
+    font: inherit;
+    line-height: 1.6;
+}
+
+.adminReviewReplyBox textarea:focus {
+    outline: none;
+    border-color: #6bb27b;
+    box-shadow: 0 0 0 3px rgba(107, 178, 123, 0.16);
+}
+
+.adminCsDetailActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 18px 26px 24px;
+    border-top: 1px solid #e5efe9;
+}
+
+.adminProductThumb,
+.adminProductThumbEmpty {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+}
+
+.adminProductThumb {
+    object-fit: cover;
+    border: 1px solid #e0ece5;
+    background-color: #f8fcf9;
+}
+
+.adminProductThumbEmpty {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed #d8e7de;
+    background-color: #f8fcf9;
+    color: #8a9a91;
+    font-size: 11px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.adminUsersEmpty {
+    padding: 48px 16px;
+    border: 1px dashed #d8e7de;
+    border-radius: 16px;
+    background-color: #f8fcf9;
+    color: #718179;
+    text-align: center;
+    font-weight: 700;
+}
+
+.adminPagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 18px;
+}
+
+.adminPagination button {
+    min-height: 38px;
+    padding: 0 14px;
+    border: 1px solid #cfe1d5;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #53665d;
+    font-weight: 700;
+}
+
+.adminPagination button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.adminPagination span {
+    color: #4f665b;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.adminAccessDenied {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100vw;
+    padding: 32px;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, #f3fbf6 0%, #ffffff 100%);
+}
+
+.adminAccessCard {
+    max-width: 520px;
+    padding: 42px;
+    border: 1px solid #dbe9e0;
+    border-radius: 22px;
+    background-color: #ffffff;
+    text-align: center;
+    box-shadow: 0 16px 36px rgba(84, 118, 96, 0.1);
+}
+
+.adminAccessCard h1 {
+    margin: 0 0 12px;
+    color: #25332d;
+    font-size: 28px;
+}
+
+.adminAccessCard p {
+    margin: 0;
+    color: #788982;
+}
+
+@media (max-width: 1100px) {
+    .adminSummaryGrid,
+    .adminFeatureGrid,
+    .adminStatusGrid,
+    .adminMetricGrid,
+    .adminDashboardGrid,
+    .adminSummaryGrid.compact,
+    .adminMetricGrid.twoCol,
+    .adminMiniMetricList {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .adminFilterCard {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .adminPage {
+        flex-direction: column;
+    }
+
+    .adminSidebar {
+        width: auto;
+        min-height: auto;
+    }
+
+    .adminProfileCard {
+        margin-top: 24px;
+    }
+
+    .adminContent {
+        min-height: auto;
+        padding: 24px;
+    }
+
+    .adminPageHeader,
+    .adminHeroCard {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .adminHeaderActions,
+    .adminFilterCard,
+    .adminSummaryGrid,
+    .adminFeatureGrid,
+    .adminStatusGrid,
+    .adminMetricGrid,
+    .adminDashboardGrid,
+    .adminSummaryGrid.compact,
+    .adminMetricGrid.twoCol,
+    .adminMiniMetricList {
+        grid-template-columns: 1fr;
+    }
+
+    .adminHeaderActions {
+        display: grid;
+        width: 100%;
+    }
+
+    .adminHeroCard h2 {
+        font-size: 24px;
+    }
+
+}

@@ -1,0 +1,215 @@
+/* 배송지 폼 전체 */
+.userAddrFormWrap {
+    width: 100%;
+    margin-bottom: 28px;
+}
+
+/* 배송지 폼 */
+.userAddrForm {
+    padding: 28px;
+    border: 1px solid #e8e8e8;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0 6px 18px rgba(127, 175, 139, 0.08);
+    box-sizing: border-box;
+}
+
+/* 제목 */
+.userAddrFormTitle {
+    margin: 0 0 24px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+}
+
+/* 입력 그룹 */
+.userAddrFormGroup {
+    margin-bottom: 18px;
+}
+
+/* 라벨 */
+.userAddrFormGroup label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #444;
+}
+
+/* 입력창 */
+.userAddrFormGroup input {
+    width: 100%;
+    height: 44px;
+    padding: 0 14px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background-color: #fff;
+    font-size: 15px;
+    color: #333;
+    box-sizing: border-box;
+}
+
+/* 읽기 전용 입력창 */
+.userAddrFormGroup input:read-only {
+    background-color: #f8faf8;
+    color: #555;
+    cursor: default;
+}
+
+/* 입력창 포커스 */
+.userAddrFormGroup input:focus {
+    outline: none;
+    border-color: #7FAF8B;
+}
+
+/* 오류 입력창 */
+.userAddrFormGroup input.inputError {
+    border-color: #e05252;
+}
+
+/* 오류 메시지 */
+.inputErrorText {
+    margin: 6px 0 0;
+    font-size: 13px;
+    font-weight: 500;
+    color: #e05252;
+    line-height: 1.4;
+}
+
+/* 주소 검색 행 */
+.userAddrZipRow {
+    display: flex;
+    gap: 10px;
+}
+
+/* 우편번호 입력 */
+.userAddrZipRow input {
+    flex: 1;
+}
+
+/* 주소 검색 버튼 */
+.userAddrSearchBtn {
+    min-width: 110px;
+    height: 44px;
+    border: none;
+    border-radius: 12px;
+    background-color: #7FAF8B;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* 체크박스 */
+.userAddrCheckBox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 4px 0 24px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* 체크박스 input */
+.userAddrCheckBox input {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+/* 버튼 영역 */
+.userAddrBtnBox {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+/* 취소 버튼 */
+.userAddrCancelBtn {
+    min-width: 86px;
+    height: 40px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #555;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* 저장 버튼 */
+.userAddrSaveBtn {
+    min-width: 86px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: #7FAF8B;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* 버튼 hover */
+.userAddrCancelBtn:hover,
+.userAddrSaveBtn:hover,
+.userAddrSearchBtn:hover {
+    opacity: 0.85;
+}
+
+/* 태블릿 */
+@media (max-width: 1024px) {
+    .userAddrForm {
+        padding: 24px;
+    }
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+    .userAddrForm {
+        padding: 22px;
+    }
+
+    .userAddrZipRow {
+        flex-direction: column;
+    }
+
+    .userAddrSearchBtn {
+        width: 100%;
+    }
+
+    .userAddrBtnBox {
+        flex-direction: column-reverse;
+    }
+
+    .userAddrCancelBtn,
+    .userAddrSaveBtn {
+        width: 100%;
+    }
+}
+
+/* 작은 모바일 */
+@media (max-width: 480px) {
+    .userAddrForm {
+        padding: 20px;
+        border-radius: 18px;
+    }
+
+    .userAddrFormTitle {
+        font-size: 22px;
+    }
+
+    .userAddrFormGroup input {
+        height: 42px;
+        font-size: 14px;
+    }
+
+    .userAddrSearchBtn {
+        height: 42px;
+        font-size: 14px;
+    }
+
+    .inputErrorText {
+        font-size: 12px;
+    }
+}

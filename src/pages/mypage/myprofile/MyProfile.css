@@ -1,0 +1,208 @@
+/* 회원정보 수정 전체 */
+.myProfile {
+    width: 100%;
+}
+
+/* 상단 */
+.myProfileHeader {
+    margin-bottom: 28px;
+}
+
+.myProfileHeader h2 {
+    margin: 0 0 8px;
+    font-size: 26px;
+    font-weight: 700;
+    color: #24382a;
+}
+
+.myProfileHeader p {
+    margin: 0;
+    font-size: 15px;
+    color: #7a857c;
+}
+
+/* 폼 */
+.myProfileForm {
+    width: 100%;
+    padding: 32px;
+    background-color: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+/* 입력 영역 */
+.myProfileField {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 18px;
+}
+
+.myProfileField label {
+    width: 130px;
+    flex-shrink: 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+    text-align: left;
+}
+
+.myProfileField input,
+.myProfileField select {
+    flex: 1;
+    height: 46px;
+    padding: 0 14px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-sizing: border-box;
+    font-size: 15px;
+    color: #333;
+    outline: none;
+    background-color: #fff;
+    min-width: 0;
+}
+
+.myProfileField input:focus,
+.myProfileField select:focus {
+    border-color: #7FAF8B;
+}
+
+/* 읽기 전용 */
+.myProfileField input[readonly] {
+    background-color: #f7f8f7;
+    color: #888;
+    cursor: default;
+}
+
+/* 에러 메시지 */
+.myProfileError {
+    margin: 8px 0 0 148px;
+    font-size: 14px;
+    color: #d9534f;
+}
+
+/* 버튼 영역 */
+.myProfileButtons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 28px;
+}
+
+.myProfileButtons button {
+    min-width: 150px;
+    height: 46px;
+    border: none;
+    border-radius: 14px;
+    background-color: #7FAF8B;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.myProfileButtons button:hover {
+    background-color: #6d9f78;
+}
+
+.myProfileButtons button:disabled {
+    background-color: #b8cbbb;
+    cursor: default;
+}
+
+/* 태블릿 */
+@media (max-width: 1024px) {
+    .myProfileForm {
+        padding: 28px;
+    }
+
+    .myProfileField {
+        display: block;
+        margin-bottom: 16px;
+    }
+
+    .myProfileField label {
+        display: block;
+        width: 100%;
+        margin-bottom: 8px;
+        font-size: 14px;
+    }
+
+    .myProfileField input,
+    .myProfileField select {
+        display: block;
+        width: 100%;
+        height: 45px;
+        font-size: 14px;
+    }
+
+    .myProfileError {
+        margin: -6px 0 14px;
+        font-size: 13px;
+    }
+
+    .myProfileButtons button {
+        width: 100%;
+        min-width: 0;
+    }
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+    .myProfileHeader {
+        margin-bottom: 22px;
+    }
+
+    .myProfileHeader h2 {
+        font-size: 24px;
+    }
+
+    .myProfileHeader p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .myProfileForm {
+        padding: 24px 20px;
+        border-radius: 18px;
+    }
+
+    .myProfileButtons {
+        margin-top: 24px;
+    }
+}
+
+/* 작은 모바일 */
+@media (max-width: 480px) {
+    .myProfileForm {
+        padding: 22px 18px;
+        border-radius: 16px;
+    }
+
+    .myProfileHeader h2 {
+        font-size: 22px;
+    }
+
+    .myProfileHeader p {
+        font-size: 14px;
+    }
+
+    .myProfileField {
+        margin-bottom: 15px;
+    }
+
+    .myProfileField input,
+    .myProfileField select {
+        height: 44px;
+        padding: 0 12px;
+        font-size: 14px;
+        border-radius: 11px;
+    }
+
+    .myProfileButtons button {
+        height: 45px;
+        font-size: 14px;
+        border-radius: 12px;
+    }
+}

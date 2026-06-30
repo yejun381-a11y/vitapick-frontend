@@ -1,0 +1,268 @@
+/* CS CENTER 전체 레이아웃 */
+
+.cs-wrap {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 24px;
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 60px;
+    box-sizing: border-box;
+}
+
+
+/* 왼쪽 메뉴 영역 */
+
+.cs-left {
+    width: 100%;
+}
+
+.cs-title {
+    margin: 0 0 40px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #111;
+}
+
+
+/* 고객센터 메뉴 */
+
+.cs-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 50px;
+    border-top: 2px solid #222;
+}
+
+.cs-menu li {
+    padding: 18px 4px;
+    border-bottom: 1px solid #dfe8e1;
+    font-size: 16px;
+    color: #222;
+    cursor: pointer;
+}
+
+.cs-menu li:hover {
+    color: #7FAF8B;
+}
+
+
+/* 고객센터 안내 박스 */
+
+.cs-info {
+    padding: 28px 24px;
+    background-color: #F7FBF7;
+    border-radius: 16px;
+}
+
+.cs-info h3 {
+    margin: 0 0 18px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #111;
+}
+
+.cs-info p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.7;
+}
+
+
+/* 오른쪽 컨텐츠 영역 */
+
+.cs-right {
+    min-width: 0;
+}
+
+
+/* 공지사항 상단 영역 */
+
+.cs-notice-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 14px;
+    margin-bottom: 6px;
+    border-bottom: 2px solid #222;
+}
+
+.cs-notice-top h3 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+    color: #111;
+}
+
+.cs-notice-top a {
+    color: #111;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.cs-notice-top a:hover {
+    color: #7FAF8B;
+}
+
+
+/* 공지사항 목록 영역 */
+
+.cs-notice-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cs-notice-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 64px;
+    padding: 0 10px;
+    border-bottom: 1px solid #dfe8e1;
+    box-sizing: border-box;
+}
+
+
+/* 공지사항 왼쪽 영역 */
+
+.cs-notice-left {
+    display: flex;
+    align-items: center;
+    min-width: 0;
+    flex: 1;
+}
+
+.cs-notice-left a {
+    color: #222;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cs-notice-left a:hover {
+    color: #7FAF8B;
+}
+
+
+/* 공지사항 오른쪽 영역 */
+
+.cs-notice-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    min-width: 120px;
+    margin-left: 20px;
+    color: #777;
+    font-size: 13px;
+    text-align: right;
+    flex-shrink: 0;
+}
+
+
+/* 메인 공지사항 빈 데이터 */
+.cs-main-notice-empty {
+    padding: 30px 0;
+    text-align: center;
+    color: #999;
+    font-size: 14px;
+}
+
+
+/* 태블릿 */
+
+@media (max-width: 1024px) {
+
+    .cs-wrap {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        padding: 50px 20px;
+    }
+
+    .cs-info {
+        max-width: 420px;
+    }
+}
+
+
+/* 모바일 */
+
+@media (max-width: 768px) {
+
+    .cs-wrap {
+        padding: 40px 16px;
+    }
+
+    .cs-title {
+        margin-bottom: 32px;
+        font-size: 22px;
+    }
+
+    .cs-menu {
+        margin-bottom: 40px;
+    }
+
+    .cs-menu li {
+        padding: 16px 4px;
+        font-size: 15px;
+    }
+
+    .cs-info {
+        padding: 24px 20px;
+    }
+
+    .cs-info h3 {
+        font-size: 18px;
+    }
+
+    .cs-notice-top h3 {
+        font-size: 20px;
+    }
+
+    .cs-notice-top a {
+        font-size: 14px;
+    }
+
+    .cs-notice-list li {
+        padding: 16px 6px;
+    }
+
+    .cs-notice-left a {
+        font-size: 14px;
+    }
+
+    .cs-notice-right {
+        min-width: auto;
+        margin-left: 12px;
+        font-size: 12px;
+    }
+}
+
+
+/* 작은 모바일 */
+
+@media (max-width: 480px) {
+
+    .cs-wrap {
+        padding: 32px 14px;
+    }
+
+
+    .cs-title {
+        font-size: 20px;
+    }
+
+    .cs-info h3 {
+        font-size: 17px;
+    }
+
+    .cs-notice-top h3 {
+        font-size: 18px;
+    }
+}

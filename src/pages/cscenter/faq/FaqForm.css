@@ -1,0 +1,208 @@
+/* 전체 영역 */
+.cs-faq-form-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    box-sizing: border-box;
+}
+
+/* 제목 */
+.cs-faq-form-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+/* 폼 */
+.cs-faq-form {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+/* 폼 그룹 */
+.cs-faq-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* 라벨 */
+.cs-faq-form-group label {
+    font-size: 15px;
+    font-weight: 600;
+    color: #444;
+}
+
+/* input */
+.cs-faq-form-input {
+    width: 100%;
+    height: 50px;
+    padding: 0 16px;
+    border: 1px solid #d8e2da;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    outline: none;
+    transition: 0.2s;
+}
+
+.cs-faq-form-input:focus {
+    border-color: #7FAF8B;
+}
+
+/* textarea */
+.cs-faq-form-textarea {
+    width: 100%;
+    min-height: 320px;
+    padding: 16px;
+    border: 1px solid #d8e2da;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #333;
+    resize: none;
+    box-sizing: border-box;
+    outline: none;
+    transition: 0.2s;
+    font-family: inherit;
+}
+
+.cs-faq-form-textarea:focus {
+    border-color: #7FAF8B;
+}
+
+/* select */
+.cs-faq-form-select {
+    width: 220px;
+    height: 46px;
+    padding: 0 14px;
+    border: 1px solid #d8e2da;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #333;
+    background-color: white;
+    outline: none;
+    transition: 0.2s;
+}
+
+.cs-faq-form-select:focus {
+    border-color: #7FAF8B;
+}
+
+/* 버튼 영역 */
+.cs-faq-form-btn-wrap {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+/* 공통 버튼 */
+.cs-faq-submit-btn,
+.cs-faq-cancel-btn {
+    min-width: 110px;
+    height: 46px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* 등록 버튼 */
+.cs-faq-submit-btn {
+    background-color: #7FAF8B;
+    color: white;
+}
+
+.cs-faq-submit-btn:hover {
+    background-color: #6A9875;
+}
+
+/* 취소 버튼 */
+.cs-faq-cancel-btn {
+    background-color: #E8F3EA;
+    color: #5E7D66;
+}
+
+.cs-faq-cancel-btn:hover {
+    background-color: #D6E8DA;
+}
+
+/* 태블릿 */
+@media (max-width: 1024px) {
+
+    .cs-faq-form-container {
+        padding: 40px 20px;
+    }
+
+    .cs-faq-form-title {
+        font-size: 28px;
+    }
+
+    .cs-faq-form-textarea {
+        min-height: 280px;
+    }
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+
+    .cs-faq-form-container {
+        padding: 30px 16px;
+    }
+
+    .cs-faq-form-title {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    .cs-faq-form {
+        gap: 22px;
+    }
+
+    .cs-faq-form-group label {
+        font-size: 14px;
+    }
+
+    .cs-faq-form-input,
+    .cs-faq-form-select {
+        height: 44px;
+        font-size: 13px;
+    }
+
+    .cs-faq-form-textarea {
+        min-height: 220px;
+        font-size: 13px;
+    }
+
+    .cs-faq-form-btn-wrap {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cs-faq-submit-btn,
+    .cs-faq-cancel-btn {
+        width: 100%;
+        max-width: 220px;
+    }
+}
+
+/* 작은 모바일 */
+@media (max-width: 480px) {
+
+    .cs-faq-form-title {
+        font-size: 22px;
+    }
+
+    .cs-faq-submit-btn,
+    .cs-faq-cancel-btn {
+        max-width: 100%;
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,209 @@
+/* 전체 영역 */
+.cs-faq-wrap {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    box-sizing: border-box;
+}
+
+/* 상단 영역 */
+.cs-faq-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+/* 제목 */
+.cs-faq-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+}
+
+/* 등록 버튼 */
+.cs-faq-write-btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: #7FAF8B;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.cs-faq-write-btn:hover {
+    background-color: #6c9d79;
+}
+
+/* 테이블 */
+.cs-faq-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+/* 테이블 헤더 */
+.cs-faq-table thead {
+    border-top: 2px solid #7FAF8B;
+    border-bottom: 1px solid #ddd;
+}
+
+.cs-faq-table th {
+    padding: 16px 10px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+    color: #333;
+    background-color: #F7FBF7;
+}
+
+/* 테이블 내용 */
+.cs-faq-table td {
+    padding: 16px 10px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    color: #555;
+}
+
+/* 제목 컬럼 */
+.cs-faq-title-cell {
+    text-align: left !important;
+}
+
+.cs-faq-title-cell a {
+    color: #333;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.cs-faq-title-cell a:hover {
+    color: #7FAF8B;
+}
+
+/* 빈 데이터 */
+.cs-faq-empty {
+    padding: 80px 0;
+    text-align: center;
+    color: #888;
+    font-size: 16px;
+}
+
+/* 태블릿 */
+@media (max-width: 1024px) {
+
+    .cs-faq-wrap {
+        padding: 40px 20px;
+    }
+
+    .cs-faq-title {
+        font-size: 28px;
+    }
+
+    .cs-faq-write-btn {
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+
+    .cs-faq-table th {
+        font-size: 14px;
+    }
+
+    .cs-faq-table td {
+        font-size: 13px;
+    }
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+
+    .cs-faq-wrap {
+        padding: 30px 16px;
+    }
+
+    .cs-faq-header {
+        margin-bottom: 10px;
+    }
+
+    .cs-faq-title {
+        font-size: 24px;
+    }
+
+    .cs-faq-write-btn {
+        padding: 9px 14px;
+        font-size: 12px;
+        border-radius: 7px;
+    }
+
+    .cs-faq-table th {
+        padding: 12px 8px;
+        font-size: 13px;
+    }
+
+    .cs-faq-table td {
+        padding: 14px 8px;
+        font-size: 13px;
+    }
+
+    .cs-faq-title-cell {
+        padding-left: 12px !important;
+    }
+
+    /* 번호 숨김 */
+    .cs-faq-table th:nth-child(1),
+    .cs-faq-table td:nth-child(1) {
+        display: none;
+    }
+
+    /* 카테고리 숨김 */
+    .cs-faq-table th:nth-child(2),
+    .cs-faq-table td:nth-child(2) {
+        display: none;
+    }
+
+    /* 사용여부 숨김 */
+    .cs-faq-table th:nth-child(4),
+    .cs-faq-table td:nth-child(4) {
+        display: none;
+    }
+
+    /* 조회수 숨김 */
+    .cs-faq-table th:nth-child(5),
+    .cs-faq-table td:nth-child(5) {
+        display: none;
+    }
+
+    /* 작성일 숨김 */
+    .cs-faq-table th:nth-child(6),
+    .cs-faq-table td:nth-child(6) {
+        display: none;
+    }
+
+    .cs-faq-empty {
+        padding: 60px 0;
+        font-size: 14px;
+    }
+}
+
+/* 작은 모바일 */
+@media (max-width: 480px) {
+
+    .cs-faq-title {
+        font-size: 22px;
+    }
+
+    .cs-faq-title-cell a {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .cs-faq-write-btn {
+        padding: 8px 12px;
+        font-size: 11px;
+    }
+}
