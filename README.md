@@ -1,16 +1,32 @@
-# React + Vite
+# VitaPick — AI 영양제 추천 쇼핑몰 (프론트엔드)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+내 몸에 맞는 영양제를 AI 챗봇이 추천해주고, 바로 주문까지 할 수 있는 쇼핑몰의 프론트엔드입니다.
+4명이 함께 만든 팀 프로젝트이며, 저는 **팀장**으로 백엔드 개발과 **서버 배포 전체**를 담당했고,
+프론트엔드에서는 제가 맡은 백엔드 기능(상품·찜·리뷰·AI 챗봇)과 연결되는 화면 작업에 참여했습니다.
 
-Currently, two official plugins are available:
+> 이 프로젝트에서 저의 주력은 백엔드입니다. 백엔드 코드는 아래 레포를 참고해 주세요.
+> github.com/yejun381-a11y/vitapick-backend
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+<br>
 
-## React Compiler
+## 사용한 기술
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| 분류 | 기술 |
+|------|------|
+| 프론트엔드 | React 19, Vite |
+| HTTP 통신 | Axios |
+| 배포 | AWS EC2, Docker, nginx |
 
-## Expanding the ESLint configuration
+<br>
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 프론트엔드에서 참여한 부분
+
+- 리뷰 평점을 합산·계산하는 로직 작성 (배열 데이터를 reduce로 처리)
+- 백엔드 API와 연동되는 화면 작업 (상품·찜·리뷰·AI 챗봇 관련)
+- 백엔드 API 주소를 로컬·배포 환경에 따라 자동으로 구분하도록 설정
+
+<br>
+
+## 전체 구조
+사용자가 사이트에 접속하면 nginx가 이 React 화면을 보여주고,
+데이터 요청은 백엔드(Spring Boot)로 전달됩니다.
